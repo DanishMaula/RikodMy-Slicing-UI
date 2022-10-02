@@ -29,3 +29,9 @@ TextStyle version = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
   fontSize: 14,
 );
+
+TextStyle tabbarMenu = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.w400,
+  fontSize: 12,
+);

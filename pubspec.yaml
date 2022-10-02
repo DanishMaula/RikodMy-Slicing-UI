@@ -38,11 +38,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_native_splash: ^2.2.10+1
   google_fonts: ^3.0.1
+  bubble_tab_indicator: ^0.1.6
 
   # flutter_native_splash-development.yaml
 flutter_native_splash:
   color: "#ffffff"
   image: assets/images/splash_screen.png
+  width: 50
+  height: 50
 
 
 dev_dependencies:

@@ -19,7 +19,7 @@ bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff2360AD),
+      backgroundColor: const Color(0xff2360AD),
       body: CustomPaint(
         painter: CustomBg(),
         child: Padding(
@@ -131,7 +131,8 @@ bool _isObscure = true;
                               text: ' REGISTER',
                               style: GoogleFonts.poppins(
                                   color: Colors.yellow,
-                                  decoration: TextDecoration.underline),
+                                  decoration: TextDecoration.underline,
+                                  fontWeight: FontWeight.bold),
                             ),
                             TextSpan(
                               text: ' your company first',
