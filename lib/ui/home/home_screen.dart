@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rikodmy/widget/search_bar.dart';
 import 'package:rikodmy/widget/tabbar_menu.dart';
 
+import '../../utils/utils.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -18,37 +20,44 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Column(
-            
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: 
-              [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   const CircleAvatar(
                     radius: 30,
-                    backgroundImage:  AssetImage('assets/images/logo_udc.png'),
+                    backgroundImage: AssetImage('assets/images/logo_udc.png'),
                   ),
                   const SizedBox(width: 10),
-                  Text('IBUJUGIL COMPANY',
-                  style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                    fontSize: 16
-                  )),     
+                  Text('IBIJUGIL COMPANY',
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 16)),
+                          SizedBox(width: 46),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff2360AD),
+                    ),
+                    onPressed: (){},
+                   child: Text('RM 322.52',
+                  style: cartButton))
                 ],
               ),
+             
               const SizedBox(height: 10),
-               const SearchBar(),
-               const SizedBox(height: 20),
-               Text('Categories',
-               style: GoogleFonts.poppins(
-                color: const Color(0xff333333),
-               ),),
-               const SizedBox(height: 5),
-               const TabBarMenu(),
-               
+              const SearchBar(),
+              const SizedBox(height: 20),
+              Text(
+                'Categories',
+                style: GoogleFonts.poppins(
+                  color: const Color(0xff333333),
+                ),
+              ),
+              const SizedBox(height: 5),
+              const TabBarMenu(),
             ],
           ),
         ),

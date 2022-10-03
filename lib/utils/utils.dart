@@ -35,3 +35,10 @@ TextStyle tabbarMenu = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
   fontSize: 12,
 );
+
+TextStyle cartButton = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.bold,
+  fontSize: 12,
+);
+

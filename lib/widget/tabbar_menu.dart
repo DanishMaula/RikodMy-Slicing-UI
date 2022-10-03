@@ -13,6 +13,8 @@ class TabBarMenu extends StatefulWidget {
 class _TabBarMenuState extends State<TabBarMenu>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+
+  
   final List<Tab> myTab = <Tab>[
     const Tab(
       text: 'All Products',
@@ -42,7 +44,7 @@ class _TabBarMenuState extends State<TabBarMenu>
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
@@ -57,11 +59,12 @@ class _TabBarMenuState extends State<TabBarMenu>
                 indicatorColor: Color(0xff2360AD),
                 tabBarIndicatorSize: TabBarIndicatorSize.tab),
             isScrollable: true,
-            
           ),
           const SizedBox(
             height: 10,
           ),
+          
+          
         ],
       ),
     );
