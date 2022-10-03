@@ -1,8 +1,11 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:rikodmy/models/all_product_data.dart';
+import 'package:rikodmy/utils/utils.dart';
+import 'package:rikodmy/widget/product_item.dart';
 
 class TabBarMenu extends StatefulWidget {
-
   const TabBarMenu({Key? key}) : super(key: key);
 
   @override
@@ -14,19 +17,30 @@ class _TabBarMenuState extends State<TabBarMenu>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
-  
   final List<Tab> myTab = <Tab>[
-    const Tab(
-      text: 'All Products',
+    Tab(
+      child: Text(
+        'All Product',
+        style: tabCategory,
+      ),
     ),
-    const Tab(
-      text: 'Electronics',
+    Tab(
+      child: Text(
+        'Electronics',
+        style: tabCategory,
+      ),
     ),
-    const Tab(
-      text: 'Tools',
+    Tab(
+      child: Text(
+        'Tools',
+        style: tabCategory,
+      ),
     ),
-    const Tab(
-      text: 'Beauty',
+    Tab(
+      child: Text(
+        'Beauty',
+        style: tabCategory,
+      ),
     ),
   ];
 
@@ -44,7 +58,7 @@ class _TabBarMenuState extends State<TabBarMenu>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
@@ -61,13 +75,39 @@ class _TabBarMenuState extends State<TabBarMenu>
             isScrollable: true,
           ),
           const SizedBox(
-            height: 10,
+            height: 5,
           ),
-          
-          
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text('Our Products',
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  )),
+            ],
+          ),
+          Expanded(
+            child: TabBarView(
+                // ignore: sort_child_properties_last
+                children: myTab.map((Tab tab) {
+                  return ListView.builder(
+                    itemBuilder: (context, index) {
+                      final AllProduct allProduct = allProductList[index];
+                      return InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/productDetail');
+                        },
+                        child: ProductItem(allProduct: allProduct),
+                      );
+                    },
+                    itemCount: allProductList.length,
+                  );
+                }).toList(),
+                controller: _tabController),
+          ),
         ],
       ),
     );
   }
-
 }

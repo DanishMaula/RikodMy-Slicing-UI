@@ -42,3 +42,69 @@ TextStyle cartButton = GoogleFonts.poppins(
   fontSize: 12,
 );
 
+TextStyle itemName = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w600,
+  fontSize: 16,
+);
+
+TextStyle itemDesc = GoogleFonts.poppins(
+  color:  Colors.grey,
+  fontWeight: FontWeight.w600,
+  fontSize: 10,
+);
+
+TextStyle itemStock = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w500,
+  fontSize: 11,
+);
+
+TextStyle itemPrice = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.w700,
+  fontSize: 14,
+);
+
+TextStyle tabCategory = GoogleFonts.poppins(
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
+
+TextStyle title = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.bold,
+  fontSize: 16,
+);
+
+TextStyle priceDetail = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.bold,
+  fontSize: 18,
+);
+
+TextStyle quantity = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.bold,
+  fontSize: 16,
+);
+
+TextStyle titleNameDetail = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w600,
+  fontSize: 18,
+);
+
+TextStyle stockDetail = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w600,
+  fontSize: 11,
+);
+
+TextStyle descDetail = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
+
+

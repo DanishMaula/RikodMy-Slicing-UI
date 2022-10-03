@@ -36,17 +36,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
                           fontSize: 16)),
-                          SizedBox(width: 46),
+                  const SizedBox(width: 46),
                   ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff2360AD),
-                    ),
-                    onPressed: (){},
-                   child: Text('RM 322.52',
-                  style: cartButton))
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff2360AD),
+                      ),
+                      onPressed: () {},
+                      child: Text('RM 322.52', style: cartButton))
                 ],
               ),
-             
               const SizedBox(height: 10),
               const SearchBar(),
               const SizedBox(height: 20),
@@ -54,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 'Categories',
                 style: GoogleFonts.poppins(
                   color: const Color(0xff333333),
+                  fontWeight: FontWeight.w500,
                 ),
               ),
               const SizedBox(height: 5),
