@@ -41,7 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff2360AD),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/cartScreen');
+                      },
                       child: Text('RM 322.52', style: cartButton))
                 ],
               ),

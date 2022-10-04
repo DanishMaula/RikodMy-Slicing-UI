@@ -108,3 +108,92 @@ TextStyle descDetail = GoogleFonts.poppins(
 );
 
 
+TextStyle priceBottom = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.bold,
+  fontSize: 16,
+);
+
+TextStyle addCart = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+);
+
+TextStyle cartSelectAll = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+);
+
+TextStyle cartRemoveAll = GoogleFonts.poppins(
+  color: const Color(0xffEB5757),
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+);
+
+TextStyle totalCart = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
+
+TextStyle totalPrice = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.w700,
+  fontSize: 14,
+);
+
+TextStyle titleDialog = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontWeight: FontWeight.w600,
+  fontSize: 16,
+);
+
+TextStyle buttonYesDialog = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
+
+TextStyle buttonPaymentDialog = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
+
+TextStyle titleTransaction = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.bold,
+  fontSize: 16,
+);
+
+TextStyle star = GoogleFonts.poppins(
+  color: const Color(0xffEB5757),
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+);
+
+TextStyle nameNumber = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
+
+TextStyle nameNumberValue = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontWeight: FontWeight.w600,
+  fontSize: 14,
+);
+
+TextStyle notesStyle = GoogleFonts.poppins(
+  color: const Color(0xffBDBDBD),
+  fontWeight: FontWeight.w600,
+  fontSize: 14,
+);
+
+TextStyle completePayment = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.bold,
+  fontSize: 16,
+);

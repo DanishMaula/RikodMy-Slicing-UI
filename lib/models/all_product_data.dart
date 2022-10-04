@@ -14,7 +14,7 @@ class AllProduct {
   });
 }
 
-var allProductList = [
+List<AllProduct> allProductList = [
   AllProduct(
       name: 'Xiao Mi Yi || 4K',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -34,7 +34,7 @@ var allProductList = [
       price: 'RM 30.54',
       image: 'assets/images/xiaomi.png'),
   AllProduct(
-      name: 'Premiunm Dutch Oven',
+      name: 'Premium Dutch Oven',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
       stock: 'Stock : 1',
       price: 'RM 90.54',

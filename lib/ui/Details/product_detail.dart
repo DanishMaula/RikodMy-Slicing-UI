@@ -13,7 +13,9 @@ class ProductDetail extends StatefulWidget {
   State<ProductDetail> createState() => _ProductDetailState();
 }
 
+
 class _ProductDetailState extends State<ProductDetail> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,21 +86,57 @@ class _ProductDetailState extends State<ProductDetail> {
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                Text(
-                  widget.allProduct.name,
-                  style: titleNameDetail,
-                ),
-                Text(widget.allProduct.stock, style: stockDetail),
-                const SizedBox(height: 5),
-                Text(widget.allProduct.description, style: descDetail),
-              ]),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget.allProduct.name,
+                      style: titleNameDetail,
+                    ),
+                    Text(widget.allProduct.stock, style: stockDetail),
+                    const SizedBox(height: 5),
+                    Text(widget.allProduct.description, style: descDetail),
+                  ]),
             ),
           ],
         ),
       ),
-      
+      bottomNavigationBar: Container(
+        height: 50,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 5,
+              blurRadius: 7,
+              offset: const Offset(0, 3), // changes position of shadow
+            ),
+          ],
+          color: Colors.white,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(widget.allProduct.price, style: priceBottom),
+              SizedBox(
+                width: 150,
+                height: 50,
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  color: const Color(0xff2360AD),
+                  child: Text(
+                    'ADD TO CART',
+                    style: addCart,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
