@@ -197,3 +197,27 @@ TextStyle completePayment = GoogleFonts.poppins(
   fontWeight: FontWeight.bold,
   fontSize: 16,
 );
+
+TextStyle notRequired = GoogleFonts.poppins(
+  color: const Color(0xffEB5757),
+  fontWeight: FontWeight.w600,
+  fontSize: 13,
+);
+
+TextStyle modalSheetStyle = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+);
+
+TextStyle modalSheetCancelStyle = GoogleFonts.poppins(
+  color: const Color(0xffEB5757),
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+);
+
+TextStyle modalSheetCompleteStyle = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.bold,
+  fontSize: 18,
+);

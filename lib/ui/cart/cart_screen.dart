@@ -393,7 +393,9 @@ class _CartScreenState extends State<CartScreen> {
                                             border: Border.all(
                                                 color: Color(0xffE0E0E0))),
                                         child: MaterialButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.pushNamed(context, '/completeTransactionCash');
+                                          },
                                           child: Text(
                                             'Go to payment',
                                             style: buttonPaymentDialog,

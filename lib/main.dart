@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:rikodmy/models/all_product_data.dart';
 import 'package:rikodmy/ui/Details/product_detail.dart';
 import 'package:rikodmy/ui/cart/cart_screen.dart';
+import 'package:rikodmy/ui/cart/completed_transaction_cash.dart';
 import 'package:rikodmy/ui/cart/completed_transaction_quotation.dart';
+import 'package:rikodmy/ui/cart/file_result.dart';
 import 'package:rikodmy/ui/home/home_screen.dart';
 import 'package:rikodmy/ui/login/login_screen.dart';
 
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
         '/productDetail': (context) => ProductDetail(allProduct: allProduct),
         '/cartScreen': (context) =>  CartScreen(allProduct: allProduct),
         '/completeTransactionQuotation':(context) => const CompleteTransactionQuotation(),
+        '/completeTransactionCash':(context) => const CompleteTransactionCash(),
+        '/fileResult':(context) => const FileResult(),
       },
     );
   }
