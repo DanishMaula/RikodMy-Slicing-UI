@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:rikodmy/ui/ledger/ledger_pettycash_screen.dart';
 import 'package:rikodmy/ui/ledger/ledger_screen_expenses.dart';
 import 'package:rikodmy/utils/utils.dart';
 
@@ -83,20 +84,13 @@ late TabController _tabController;
             Expanded(
               child: TabBarView(
                 controller: _tabController,
+                // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   // first tab bar view widget 
-                  LedgerScreenExpenses(),
+                  const LedgerScreenExpenses(),
 
                   // second tab bar view widget
-                  Center(
-                    child: Text(
-                      'Buy Now',
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
+                 const LedgerPettyCashScreen()
                 ],
               ),
             ),

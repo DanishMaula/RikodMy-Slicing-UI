@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:rikodmy/models/expenses_data.dart';
-import 'package:rikodmy/widget/list_item/expenses_item.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:rikodmy/models/expenses_data%20copy.dart';
+import 'package:rikodmy/widget/list_item/petty_cash_item.dart';
 
-import '../../utils/utils.dart';
+import '../../models/expenses_data.dart';
 
-class LedgerScreenExpenses extends StatefulWidget {
-  const LedgerScreenExpenses({super.key});
+class LedgerPettyCashScreen extends StatefulWidget {
+  const LedgerPettyCashScreen({super.key});
 
   @override
-  State<LedgerScreenExpenses> createState() => _LedgerScreenExpensesState();
+  State<LedgerPettyCashScreen> createState() => _LedgerPettyCashScreenState();
 }
 
-class _LedgerScreenExpensesState extends State<LedgerScreenExpenses> {
+class _LedgerPettyCashScreenState extends State<LedgerPettyCashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: const Color(0xffEB5757),
+        backgroundColor: const Color(0xff2360AD),
         child: const Icon(Icons.add),
       ),
       body:  SafeArea(
@@ -29,10 +31,10 @@ class _LedgerScreenExpensesState extends State<LedgerScreenExpenses> {
                physics: const NeverScrollableScrollPhysics(),  
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  final LedgerExpenses ledgerExpenses = ledgerExpensesList[index];
+                  final LedgerPettyCash ledgerPettyCash = ledgerPettyCashList[index];
                   return InkWell(
                     onTap: () { },
-                    child: ExpensesItem(ledgerExpenses: ledgerExpenses),
+                    child: PettyCashItem(ledgerPettyCash: ledgerPettyCash),
                   );
                 },
                 itemCount: ledgerExpensesList.length,

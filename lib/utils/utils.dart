@@ -272,3 +272,14 @@ TextStyle expensesSeeDetail = GoogleFonts.poppins(
   color: const Color(0xffEB5757),
   fontSize: 12,
 );
+
+TextStyle pettyCashPrice = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.bold,
+  fontSize: 16,
+);
+
+TextStyle pettyCashSeeDetail = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontSize: 12,
+);
