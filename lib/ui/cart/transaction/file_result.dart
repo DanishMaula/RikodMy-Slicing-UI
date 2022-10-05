@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/ui/home/home_screen.dart';
 import 'package:rikodmy/widget/nav_bar.dart';
 
-import '../../utils/utils.dart';
+import '../../../utils/utils.dart';
 
 class FileResult extends StatefulWidget {
   const FileResult({super.key});

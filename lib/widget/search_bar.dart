@@ -71,3 +71,38 @@ class _SeacrchBarCustomerState extends State<SeacrchBarCustomer> {
     );
   }
 }
+
+class SearchCustomer extends StatefulWidget {
+  const SearchCustomer({super.key});
+
+  @override
+  State<SearchCustomer> createState() => _SearchCustomerState();
+}
+
+class _SearchCustomerState extends State<SearchCustomer> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
+      child: Container(
+        height: 45,
+        decoration: BoxDecoration(
+          border: Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: TextField(
+          decoration: InputDecoration(
+            hintText: 'Search customer here...',
+            hintStyle: GoogleFonts.poppins(color: const Color(0xff828282), fontSize: 14),
+            border: InputBorder.none,
+            prefixIcon: const Icon(
+              Icons.search,
+              color: Colors.grey,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

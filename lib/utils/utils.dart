@@ -233,3 +233,16 @@ TextStyle customerPhone = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   fontSize: 14,
 );
+
+TextStyle textNoData = GoogleFonts.poppins(
+  color: const Color(0xffE0E0E0),
+  fontWeight: FontWeight.w600,
+  fontSize: 14,
+);
+
+TextStyle buttonNoData = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+);
+

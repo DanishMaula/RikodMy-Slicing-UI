@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/widget/search_bar.dart';
 
-import '../../utils/utils.dart';
+import '../../../utils/utils.dart';
 
 class CompleteTransactionQuotation extends StatelessWidget {
   const CompleteTransactionQuotation({super.key});

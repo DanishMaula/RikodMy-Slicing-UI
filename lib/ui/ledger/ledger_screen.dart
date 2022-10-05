@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/utils.dart';
+
 class LedgerScreen extends StatefulWidget {
   const LedgerScreen({super.key});
 
@@ -10,6 +12,18 @@ class LedgerScreen extends StatefulWidget {
 class _LedgerScreenState extends State<LedgerScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xff2360AD),
+        child: const Icon(Icons.add),
+      ),
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text(
+            'Ledger',
+            style: title,
+          )),
+    );
   }
 }

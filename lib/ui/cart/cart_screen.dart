@@ -20,7 +20,6 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   bool isChecked = false;
   String? startPrice = 'RM 0';
-  String? endPrice = 'RM 355.22';
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +95,7 @@ class _CartScreenState extends State<CartScreen> {
                                         decoration: BoxDecoration(
                                           color: Colors.white,
                                           border: Border.all(
-                                              color: Color(0xffE0E0E0)),
+                                              color: const Color(0xffE0E0E0)),
                                         ),
                                         child: MaterialButton(
                                           onPressed: () {
@@ -118,7 +117,10 @@ class _CartScreenState extends State<CartScreen> {
                                           color: Color(0xff2360AD),
                                         ),
                                         child: MaterialButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.pushNamed(
+                                                context, '/cartNoData');
+                                          },
                                           child: Text(
                                             'Yes',
                                             style: buttonYesDialog,
@@ -147,7 +149,7 @@ class _CartScreenState extends State<CartScreen> {
                     shape: const CircleBorder(),
                     onChanged: (bool? value) {},
                   ),
-            
+
                   //item cart
                   Expanded(
                     child: Padding(
@@ -182,7 +184,8 @@ class _CartScreenState extends State<CartScreen> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(10.0),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisSize: MainAxisSize.min,
                                     children: <Widget>[
                                       Text(
@@ -236,7 +239,7 @@ class _CartScreenState extends State<CartScreen> {
                     shape: const CircleBorder(),
                     onChanged: (bool? value) {},
                   ),
-            
+
                   //item cart
                   Expanded(
                     child: Padding(
@@ -271,7 +274,8 @@ class _CartScreenState extends State<CartScreen> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(10.0),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisSize: MainAxisSize.min,
                                     children: <Widget>[
                                       Text(
@@ -337,7 +341,7 @@ class _CartScreenState extends State<CartScreen> {
               Row(
                 children: [
                   Text(
-                    isChecked == true ? 'RM 222.35' : 'RM 0',
+                    isChecked == true ? 'RM 355.22' : 'RM 0',
                     style: totalPrice,
                   ),
                   const SizedBox(width: 10),
@@ -396,7 +400,8 @@ class _CartScreenState extends State<CartScreen> {
                                                 color: Color(0xffE0E0E0))),
                                         child: MaterialButton(
                                           onPressed: () {
-                                            Navigator.pushNamed(context, '/completeTransactionCash');
+                                            Navigator.pushNamed(context,
+                                                '/completeTransactionCash');
                                           },
                                           child: Text(
                                             'Go to payment',

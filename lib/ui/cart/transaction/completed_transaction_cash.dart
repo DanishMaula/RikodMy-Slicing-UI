@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import '../../utils/utils.dart';
-import '../../widget/search_bar.dart';
+import '../../../utils/utils.dart';
+import '../../../widget/search_bar.dart';
 
 class CompleteTransactionCash extends StatefulWidget {
   const CompleteTransactionCash({super.key});
@@ -370,12 +370,6 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    const Divider(
-                                      color: Colors.grey,
-                                      thickness: 2,
-                                      endIndent: 170,
-                                      indent: 170,
-                                    ),
                                     const Divider(
                                       color: Colors.grey,
                                       thickness: 2,
