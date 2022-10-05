@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rikodmy/models/all_product_data.dart';
-import 'package:rikodmy/ui/Details/product_detail.dart';
+import 'package:rikodmy/ui/home/product_detail.dart';
 import 'package:rikodmy/ui/cart/cart_no_data.dart';
 import 'package:rikodmy/ui/cart/cart_screen.dart';
 import 'package:rikodmy/ui/cart/transaction/completed_transaction_cash.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     final AllProduct allProduct = allProductList[0];
 
     return MaterialApp(
-      theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.white)),
+      theme: ThemeData(appBarTheme: const AppBarTheme(color: Colors.white)),
       initialRoute: '/login',
       debugShowCheckedModeBanner: false,
       routes: {

@@ -246,3 +246,29 @@ TextStyle buttonNoData = GoogleFonts.poppins(
   fontSize: 14,
 );
 
+TextStyle tabbarLedgerText = GoogleFonts.poppins(
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
+
+TextStyle expensesPrice = GoogleFonts.poppins(
+  color: const Color(0xffEB5757),
+  fontWeight: FontWeight.bold,
+  fontSize: 16,
+);
+
+TextStyle expensesDesc = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w600,
+  fontSize: 14,
+);
+
+TextStyle expensesDate = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontSize: 13,
+);
+
+TextStyle expensesSeeDetail = GoogleFonts.poppins(
+  color: const Color(0xffEB5757),
+  fontSize: 12,
+);

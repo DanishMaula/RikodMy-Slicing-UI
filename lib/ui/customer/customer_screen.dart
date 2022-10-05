@@ -40,7 +40,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
               child: Column(
                 children: [
                   ListView.builder(
-                   physics: NeverScrollableScrollPhysics(),  
+                   physics: const NeverScrollableScrollPhysics(),  
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       final AllCustomer allCustomer = allCustomerList[index];
