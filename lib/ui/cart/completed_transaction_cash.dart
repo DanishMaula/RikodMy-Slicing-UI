@@ -37,283 +37,285 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
       body: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                   Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        
-                      },
-                      child: SeacrchBarCustomer()),
-                  ),
-                  Container(
+          child: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                     Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          
+                        },
+                        child: SeacrchBarCustomer()),
+                    ),
+                    Container(
+                      height: 45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        color: const Color(0xff2360AD),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      margin: const EdgeInsets.only(left: 10),
+                      child: const Icon(
+                        Icons.add_rounded,
+                        color: Color(0xffffffff),
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Data Customer', style: titleTransaction),
+                    Text.rich(
+                      TextSpan(
+                        text: '*',
+                        style: star,
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 5),
+                Text('Name', style: nameNumber),
+                const SizedBox(height: 5),
+                Container(
+                    width: double.infinity,
                     height: 45,
-                    width: 45,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      color: const Color(0xff2360AD),
+                      border:
+                          Border.all(color: const Color(0xffE0E0E0), width: 1.5),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    margin: const EdgeInsets.only(left: 10),
-                    child: const Icon(
-                      Icons.add_rounded,
-                      color: Color(0xffffffff),
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                      child: Text('Raeihan Alvaro', style: nameNumberValue),
+                    )),
+                const SizedBox(height: 5),
+                Text('Number', style: nameNumber),
+                const SizedBox(height: 5),
+                Container(
+                    width: double.infinity,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      border:
+                          Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text('Data Customer', style: titleTransaction),
-                  Text.rich(
-                    TextSpan(
-                      text: '*',
-                      style: star,
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 5),
-              Text('Name', style: nameNumber),
-              const SizedBox(height: 5),
-              Container(
-                  width: double.infinity,
-                  height: 45,
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                      child: Text('08123456789', style: nameNumberValue),
+                    )),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Status', style: titleTransaction),
+                    Text.rich(
+                      TextSpan(
+                        text: '*',
+                        style: star,
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 5),
+                Container(
                   decoration: BoxDecoration(
                     border:
                         Border.all(color: const Color(0xffE0E0E0), width: 1.5),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-                    child: Text('Raeihan Alvaro', style: nameNumberValue),
-                  )),
-              const SizedBox(height: 5),
-              Text('Number', style: nameNumber),
-              const SizedBox(height: 5),
-              Container(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'CASH',
+                          style: nameNumberValue,
+                        ),
+                        const Icon(
+                          Icons.arrow_drop_down,
+                          color: Color(0xff2360AD),
+                          size: 45,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Notes', style: titleTransaction),
+                    Text.rich(
+                      TextSpan(
+                        text: '*',
+                        style: star,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                  ],
+                ),
+                const SizedBox(height: 5),
+                Container(
                   width: double.infinity,
-                  height: 45,
                   decoration: BoxDecoration(
                     border:
                         Border.all(color: const Color(0xffE0E0E0), width: 1.5),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-                    child: Text('08123456789', style: nameNumberValue),
-                  )),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text('Status', style: titleTransaction),
-                  Text.rich(
-                    TextSpan(
-                      text: '*',
-                      style: star,
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 5),
-              Container(
-                decoration: BoxDecoration(
-                  border:
-                      Border.all(color: const Color(0xffE0E0E0), width: 1.5),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'CASH',
-                        style: nameNumberValue,
-                      ),
-                      const Icon(
-                        Icons.arrow_drop_down,
-                        color: Color(0xff2360AD),
-                        size: 45,
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text('Notes', style: titleTransaction),
-                  Text.rich(
-                    TextSpan(
-                      text: '*',
-                      style: star,
+                    padding: const EdgeInsets.only(left: 5, top: 10, bottom: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '1. Item sold only valid for 3 days for exchange',
+                          style: notesStyle,
+                        ),
+                        Text('2. Warranty only valid for 14 days',
+                            style: notesStyle),
+                        const SizedBox(height: 20),
+                        Text('Thankyou', style: notesStyle),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 5),
-                ],
-              ),
-              const SizedBox(height: 5),
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  border:
-                      Border.all(color: const Color(0xffE0E0E0), width: 1.5),
-                  borderRadius: BorderRadius.circular(10),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 5, top: 10, bottom: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '1. Item sold only valid for 3 days for exchange',
-                        style: notesStyle,
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Report', style: titleTransaction),
+                    Text.rich(
+                      TextSpan(
+                        text: '*',
+                        style: star,
                       ),
-                      Text('2. Warranty only valid for 14 days',
-                          style: notesStyle),
-                      const SizedBox(height: 20),
-                      Text('Thankyou', style: notesStyle),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text('Report', style: titleTransaction),
-                  Text.rich(
-                    TextSpan(
-                      text: '*',
-                      style: star,
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 5),
-              Container(
-                decoration: BoxDecoration(
-                  border:
-                      Border.all(color: const Color(0xffE0E0E0), width: 1.5),
-                  borderRadius: BorderRadius.circular(10),
+                  ],
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Image Report',
-                        style: nameNumberValue,
-                      ),
-                      TextButton(
-                          onPressed: () {
-                            showModalBottomSheet(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                context: context,
-                                builder: (context) {
-                                  return SizedBox(
-                                    height: 200,
-                                    child: Column(
-                                      children: [
-                                        ListTile(
-                                          title: Text('FROM GALLERY',
+                const SizedBox(height: 5),
+                Container(
+                  decoration: BoxDecoration(
+                    border:
+                        Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Image Report',
+                          style: nameNumberValue,
+                        ),
+                        TextButton(
+                            onPressed: () {
+                              showModalBottomSheet(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10)),
+                                  context: context,
+                                  builder: (context) {
+                                    return SizedBox(
+                                      height: 200,
+                                      child: Column(
+                                        children: [
+                                          ListTile(
+                                            title: Text('FROM GALLERY',
+                                                textAlign: TextAlign.center,
+                                                style: modalSheetStyle),
+                                            onTap: () {
+                                              Navigator.pop(context);
+                                            },
+                                          ),
+                                          const Divider(
+                                            color: Colors.grey,
+                                          ),
+                                          ListTile(
+                                            title: Text(
+                                              'TAKE A PHOTO',
                                               textAlign: TextAlign.center,
-                                              style: modalSheetStyle),
-                                          onTap: () {
-                                            Navigator.pop(context);
-                                          },
-                                        ),
-                                        const Divider(
-                                          color: Colors.grey,
-                                        ),
-                                        ListTile(
-                                          title: Text(
-                                            'TAKE A PHOTO',
-                                            textAlign: TextAlign.center,
-                                            style: modalSheetStyle,
+                                              style: modalSheetStyle,
+                                            ),
+                                            onTap: () {
+                                              Navigator.pop(context);
+                                            },
                                           ),
-                                          onTap: () {
-                                            Navigator.pop(context);
-                                          },
-                                        ),
-                                        const Divider(color: Colors.grey),
-                                        ListTile(
-                                          title: Text(
-                                            'Cancel',
-                                            textAlign: TextAlign.center,
-                                            style: modalSheetCancelStyle,
+                                          const Divider(color: Colors.grey),
+                                          ListTile(
+                                            title: Text(
+                                              'Cancel',
+                                              textAlign: TextAlign.center,
+                                              style: modalSheetCancelStyle,
+                                            ),
+                                            onTap: () {
+                                              Navigator.pop(context);
+                                            },
                                           ),
-                                          onTap: () {
-                                            Navigator.pop(context);
-                                          },
-                                        ),
-                                      ],
-                                    ),
-                                  );
-                                });
-                          },
-                          child: Text(
-                            'Choose File',
-                            style: totalPrice,
-                          ))
-                    ],
+                                        ],
+                                      ),
+                                    );
+                                  });
+                            },
+                            child: Text(
+                              'Choose File',
+                              style: totalPrice,
+                            ))
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 10),
-              Container(
-                decoration: BoxDecoration(
-                  border:
-                      Border.all(color: const Color(0xffE0E0E0), width: 1.5),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Signatures',
-                        style: nameNumberValue,
-                      ),
-                      TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Make Signature',
-                            style: totalPrice,
-                          ))
-                    ],
+                const SizedBox(height: 10),
+                Container(
+                  decoration: BoxDecoration(
+                    border:
+                        Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Signatures',
+                          style: nameNumberValue,
+                        ),
+                        TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Make Signature',
+                              style: totalPrice,
+                            ))
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Checkbox(
-                      value: valueCheck,
-                      onChanged: ((value) {
-                        setState(() {
-                          value = value;
-                        });
-                      })),
-                  Text('Image and Signature Not Required', style: notRequired),
-                ],
-              ),
-            ],
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Checkbox(
+                        value: valueCheck,
+                        onChanged: ((value) {
+                          setState(() {
+                            value = value;
+                          });
+                        })),
+                    Text('Image and Signature Not Required', style: notRequired),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

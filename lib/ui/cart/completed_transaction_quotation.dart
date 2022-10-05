@@ -29,142 +29,144 @@ class CompleteTransactionQuotation extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                  const Expanded(
-                    child: SeacrchBarCustomer(),
-                  ),
-                  Container(
+          child: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    const Expanded(
+                      child: SeacrchBarCustomer(),
+                    ),
+                    Container(
+                      height: 45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        color: const Color(0xff2360AD),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      margin: const EdgeInsets.only(left: 10),
+                      child: const Icon(
+                        Icons.add_rounded,
+                        color: Color(0xffffffff),
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Data Customer', style: titleTransaction),
+                    Text.rich(
+                      TextSpan(
+                        text: '*',
+                        style: star,
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 5),
+                Text('Name', style: nameNumber),
+                const SizedBox(height: 5),
+                Container(
+                    width: double.infinity,
                     height: 45,
-                    width: 45,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      color: const Color(0xff2360AD),
+                      border:
+                          Border.all(color: const Color(0xffE0E0E0), width: 1.5),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    margin: const EdgeInsets.only(left: 10),
-                    child: const Icon(
-                      Icons.add_rounded,
-                      color: Color(0xffffffff),
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                      child: Text('Raeihan Alvaro', style: nameNumberValue),
+                    )),
+                const SizedBox(height: 5),
+                Text('Number', style: nameNumber),
+                const SizedBox(height: 5),
+                Container(
+                    width: double.infinity,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      border:
+                          Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text('Data Customer', style: titleTransaction),
-                  Text.rich(
-                    TextSpan(
-                      text: '*',
-                      style: star,
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 5),
-              Text('Name', style: nameNumber),
-              const SizedBox(height: 5),
-              Container(
-                  width: double.infinity,
-                  height: 45,
-                  decoration: BoxDecoration(
-                    border:
-                        Border.all(color: const Color(0xffE0E0E0), width: 1.5),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-                    child: Text('Raeihan Alvaro', style: nameNumberValue),
-                  )),
-              const SizedBox(height: 5),
-              Text('Number', style: nameNumber),
-              const SizedBox(height: 5),
-              Container(
-                  width: double.infinity,
-                  height: 45,
-                  decoration: BoxDecoration(
-                    border:
-                        Border.all(color: const Color(0xffE0E0E0), width: 1.5),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-                    child: Text('08123456789', style: nameNumberValue),
-                  )),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text('Status', style: titleTransaction),
-                  Text.rich(
-                    TextSpan(
-                      text: '*',
-                      style: star,
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 5),
-              Container(
-                  width: double.infinity,
-                  height: 45,
-                  decoration: BoxDecoration(
-                    border:
-                        Border.all(color: const Color(0xffE0E0E0), width: 1.5),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-                    child: Text('QUOTATION', style: nameNumberValue),
-                  )),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text('Notes', style: titleTransaction),
-                  Text.rich(
-                    TextSpan(
-                      text: '*',
-                      style: star,
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 5),
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  border:
-                      Border.all(color: const Color(0xffE0E0E0), width: 1.5),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 5, top: 10, bottom: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '1. Item sold only valid for 3 days for exchange',
-                        style: notesStyle,
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                      child: Text('08123456789', style: nameNumberValue),
+                    )),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Status', style: titleTransaction),
+                    Text.rich(
+                      TextSpan(
+                        text: '*',
+                        style: star,
                       ),
-                      Text('2. Warranty only valid for 14 days',
-                          style: notesStyle),
-                      const SizedBox(height: 20),
-                      Text('Thankyou', style: notesStyle),
-                    ],
-                  ),
+                    )
+                  ],
                 ),
-              )
-            ],
+                const SizedBox(height: 5),
+                Container(
+                    width: double.infinity,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      border:
+                          Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                      child: Text('QUOTATION', style: nameNumberValue),
+                    )),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Notes', style: titleTransaction),
+                    Text.rich(
+                      TextSpan(
+                        text: '*',
+                        style: star,
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 5),
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    border:
+                        Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 5, top: 10, bottom: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '1. Item sold only valid for 3 days for exchange',
+                          style: notesStyle,
+                        ),
+                        Text('2. Warranty only valid for 14 days',
+                            style: notesStyle),
+                        const SizedBox(height: 20),
+                        Text('Thankyou', style: notesStyle),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

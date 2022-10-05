@@ -19,47 +19,49 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                  const CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage('assets/images/logo_udc.png'),
-                  ),
-                  const SizedBox(width: 10),
-                  Text('IBIJUGIL COMPANY',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                          fontSize: 16)),
-                  const SizedBox(width: 46),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff2360AD),
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/cartScreen');
-                      },
-                      child: Text('RM 322.52', style: cartButton))
-                ],
-              ),
-              const SizedBox(height: 10),
-              const SearchBar(),
-              const SizedBox(height: 20),
-              Text(
-                'Categories',
-                style: GoogleFonts.poppins(
-                  color: const Color(0xff333333),
-                  fontWeight: FontWeight.w500,
+          child: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    const CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage('assets/images/logo_udc.png'),
+                    ),
+                    const SizedBox(width: 10),
+                    Text('IBIJUGIL COMPANY',
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                            fontSize: 16)),
+                    const SizedBox(width: 46),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xff2360AD),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/cartScreen');
+                        },
+                        child: Text('RM 322.52', style: cartButton))
+                  ],
                 ),
-              ),
-              const SizedBox(height: 5),
-              const TabBarMenu(),
-            ],
+                const SizedBox(height: 10),
+                const SearchBar(),
+                const SizedBox(height: 20),
+                Text(
+                  'Categories',
+                  style: GoogleFonts.poppins(
+                    color: const Color(0xff333333),
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const SizedBox(height: 5),
+                const TabBarMenu(),
+              ],
+            ),
           ),
         ),
       ),
