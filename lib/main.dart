@@ -8,6 +8,8 @@ import 'package:rikodmy/ui/cart/file_result.dart';
 import 'package:rikodmy/ui/home/home_screen.dart';
 import 'package:rikodmy/ui/login/login_screen.dart';
 
+import 'ui/cart/search_customer.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -32,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/completeTransactionQuotation':(context) => const CompleteTransactionQuotation(),
         '/completeTransactionCash':(context) => const CompleteTransactionCash(),
         '/fileResult':(context) => const FileResult(),
+        '/searchCustomer':(context) => const SearchCustomer(),
       },
     );
   }

@@ -23,6 +23,7 @@ class _SearchBarState extends State<SearchBar> {
       child: TextField(
         decoration: InputDecoration(
           hintText: 'Search here...',
+          
           hintStyle: GoogleFonts.poppins(color: Colors.grey, fontSize: 14),
           border: InputBorder.none,
           prefixIcon: const Icon(
@@ -54,6 +55,9 @@ class _SeacrchBarCustomerState extends State<SeacrchBarCustomer> {
         borderRadius: BorderRadius.circular(10),
       ),
       child: TextField(
+        onTap: () {
+          Navigator.pushNamed(context, '/searchCustomer');
+        },
         decoration: InputDecoration(
           hintText: 'Search customer here...',
           hintStyle: GoogleFonts.poppins(color: const Color(0xff828282), fontSize: 14),

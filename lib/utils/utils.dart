@@ -221,3 +221,15 @@ TextStyle modalSheetCompleteStyle = GoogleFonts.poppins(
   fontWeight: FontWeight.bold,
   fontSize: 18,
 );
+
+TextStyle customerName = GoogleFonts.poppins(
+  color: const Color(0xff4F4F4F),
+  fontWeight: FontWeight.bold,
+  fontSize: 15,
+);
+
+TextStyle customerPhone = GoogleFonts.poppins(
+  color: const Color(0xff4F4F4F),
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);

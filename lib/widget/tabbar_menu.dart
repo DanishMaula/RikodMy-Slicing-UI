@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rikodmy/models/all_product_data.dart';
 import 'package:rikodmy/utils/utils.dart';
-import 'package:rikodmy/widget/product_item.dart';
+import 'package:rikodmy/widget/list_item/product_item.dart';
 
 class TabBarMenu extends StatefulWidget {
   const TabBarMenu({Key? key}) : super(key: key);
@@ -92,6 +92,7 @@ class _TabBarMenuState extends State<TabBarMenu>
                 // ignore: sort_child_properties_last
                 children: myTab.map((Tab tab) {
                   return ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       final AllProduct allProduct = allProductList[index];
                       return InkWell(

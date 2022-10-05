@@ -44,12 +44,8 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                 Row(
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                     Expanded(
-                      child: GestureDetector(
-                        onTap: () {
-                          
-                        },
-                        child: SeacrchBarCustomer()),
+                    const Expanded(
+                      child: SeacrchBarCustomer(),
                     ),
                     Container(
                       height: 45,
@@ -87,8 +83,8 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                     width: double.infinity,
                     height: 45,
                     decoration: BoxDecoration(
-                      border:
-                          Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                      border: Border.all(
+                          color: const Color(0xffE0E0E0), width: 1.5),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Padding(
@@ -103,8 +99,8 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                     width: double.infinity,
                     height: 45,
                     decoration: BoxDecoration(
-                      border:
-                          Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                      border: Border.all(
+                          color: const Color(0xffE0E0E0), width: 1.5),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Padding(
@@ -173,7 +169,8 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 5, top: 10, bottom: 10),
+                    padding:
+                        const EdgeInsets.only(left: 5, top: 10, bottom: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -311,7 +308,8 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                             value = value;
                           });
                         })),
-                    Text('Image and Signature Not Required', style: notRequired),
+                    Text('Image and Signature Not Required',
+                        style: notRequired),
                   ],
                 ),
               ],

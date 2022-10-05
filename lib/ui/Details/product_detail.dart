@@ -18,24 +18,24 @@ class _ProductDetailState extends State<ProductDetail> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-            leading: IconButton(
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                color: Color(0xff2360AD),
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+    return Scaffold(
+      appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Color(0xff2360AD),
             ),
-            centerTitle: true,
-            title: Text(
-              'Details',
-              style: title,
-            )),
-        body: SingleChildScrollView(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          centerTitle: true,
+          title: Text(
+            'Details',
+            style: title,
+          )),
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -101,41 +101,41 @@ class _ProductDetailState extends State<ProductDetail> {
             ],
           ),
         ),
-        bottomNavigationBar: Container(
-          height: 50,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: const Offset(0, 3), // changes position of shadow
-              ),
-            ],
-            color: Colors.white,
-          ),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(widget.allProduct.price, style: priceBottom),
-                SizedBox(
-                  width: 150,
-                  height: 50,
-                  child: MaterialButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    color: const Color(0xff2360AD),
-                    child: Text(
-                      'ADD TO CART',
-                      style: addCart,
-                    ),
-                  ),
-                )
-              ],
+      ),
+      bottomNavigationBar: Container(
+        height: 50,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 5,
+              blurRadius: 7,
+              offset: const Offset(0, 3), // changes position of shadow
             ),
+          ],
+          color: Colors.white,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(widget.allProduct.price, style: priceBottom),
+              SizedBox(
+                width: 150,
+                height: 50,
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  color: const Color(0xff2360AD),
+                  child: Text(
+                    'ADD TO CART',
+                    style: addCart,
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       ),
