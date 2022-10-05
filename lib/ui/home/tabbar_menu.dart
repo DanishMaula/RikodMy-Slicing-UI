@@ -2,6 +2,7 @@ import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rikodmy/models/all_product_data.dart';
+import 'package:rikodmy/ui/home/details/product_detail.dart';
 import 'package:rikodmy/utils/utils.dart';
 import 'package:rikodmy/widget/list_item/product_item.dart';
 
@@ -97,7 +98,9 @@ class _TabBarMenuState extends State<TabBarMenu>
                       final AllProduct allProduct = allProductList[index];
                       return InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, '/productDetail');
+                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+                            return ProductDetail(allProduct: allProduct);
+                          }));
                         },
                         child: ProductItem(allProduct: allProduct),
                       );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:rikodmy/models/expenses_data%20copy.dart';
 
+import '../../models/petty_cash_data.dart';
 import '../../utils/utils.dart';
 
 class PettyCashItem extends StatefulWidget {

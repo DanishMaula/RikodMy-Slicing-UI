@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:rikodmy/models/expenses_data%20copy.dart';
 import 'package:rikodmy/widget/list_item/petty_cash_item.dart';
 
 import '../../models/expenses_data.dart';
+import '../../models/petty_cash_data.dart';
+import 'add_data_ledger.dart';
 
 class LedgerPettyCashScreen extends StatefulWidget {
-  const LedgerPettyCashScreen({super.key});
+  final String title;
+
+  const LedgerPettyCashScreen({super.key, required this.title});
 
   @override
   State<LedgerPettyCashScreen> createState() => _LedgerPettyCashScreenState();
@@ -18,27 +21,34 @@ class _LedgerPettyCashScreenState extends State<LedgerPettyCashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return const AddDataLedger(title: 'Add Petty Cash Data', text: 'Petty Cash');
+          }));
+        },
         backgroundColor: const Color(0xff2360AD),
         child: const Icon(Icons.add),
       ),
-      body:  SafeArea(
+      body: SafeArea(
         child: SingleChildScrollView(
           physics: const ScrollPhysics(),
           child: Column(
             children: [
               ListView.builder(
-               physics: const NeverScrollableScrollPhysics(),  
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  final LedgerPettyCash ledgerPettyCash = ledgerPettyCashList[index];
+                  final LedgerPettyCash ledgerPettyCash =
+                      ledgerPettyCashList[index];
                   return InkWell(
-                    onTap: () { },
+                    onTap: () {
+                      Navigator.pushNamed(context, '/ledgerPettyCashDetail');
+                    },
                     child: PettyCashItem(ledgerPettyCash: ledgerPettyCash),
                   );
                 },
                 itemCount: ledgerExpensesList.length,
-                ),
+              ),
             ],
           ),
         ),

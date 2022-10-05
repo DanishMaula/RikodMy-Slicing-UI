@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/models/all_product_data.dart';
+import 'package:rikodmy/ui/cart/cart_no_data.dart';
 
 import '../../utils/utils.dart';
 
@@ -118,8 +119,22 @@ class _CartScreenState extends State<CartScreen> {
                                         ),
                                         child: MaterialButton(
                                           onPressed: () {
-                                            Navigator.pushNamed(
-                                                context, '/cartNoData');
+                                            Navigator.push(
+                                                context,
+                                                PageRouteBuilder(
+                                                    pageBuilder: (context,
+                                                            animation,
+                                                            secondaryAnimation) =>
+                                                        const CartNoData(),
+                                                    transitionsBuilder:
+                                                        (context,
+                                                            animation,
+                                                            secondaryAnimation,
+                                                            child) {
+                                                      return FadeTransition(
+                                                          opacity: animation,
+                                                          child: child);
+                                                    }));
                                           },
                                           child: Text(
                                             'Yes',

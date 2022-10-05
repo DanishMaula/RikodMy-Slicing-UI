@@ -15,7 +15,7 @@ class TabbarLedger extends StatefulWidget {
 
 class _TabbarLedgerState extends State<TabbarLedger>
     with SingleTickerProviderStateMixin {
-late TabController _tabController;
+  late TabController _tabController;
 
   @override
   void initState() {
@@ -60,10 +60,10 @@ late TabController _tabController;
                 // give the indicator a decoration (color and border radius)
                 indicator: const BoxDecoration(
                   borderRadius: BorderRadius.only(
-                     topLeft: Radius.circular(10),
-                  bottomLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
                   ),
                   color: Color(0xff2360AD),
                 ),
@@ -71,7 +71,7 @@ late TabController _tabController;
                 unselectedLabelColor: const Color(0xff828282),
                 // ignore: prefer_const_literals_to_create_immutables
                 tabs: [
-                   Tab(
+                  Tab(
                     child: Text('Expenses', style: tabbarLedgerText),
                   ),
                   Tab(
@@ -86,11 +86,10 @@ late TabController _tabController;
                 controller: _tabController,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  // first tab bar view widget 
-                  const LedgerScreenExpenses(),
-
+                  // first tab bar view widget
+                  const LedgerScreenExpenses(title: 'Add Expenses Data',),
                   // second tab bar view widget
-                 const LedgerPettyCashScreen()
+                  const LedgerPettyCashScreen(title: 'Add Petty Cash Data',)
                 ],
               ),
             ),
