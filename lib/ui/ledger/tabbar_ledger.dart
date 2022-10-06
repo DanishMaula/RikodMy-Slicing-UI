@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:rikodmy/ui/ledger/ledger_pettycash_screen.dart';
-import 'package:rikodmy/ui/ledger/ledger_screen_expenses.dart';
+import 'package:rikodmy/ui/ledger/screen/ledger_pettycash_screen.dart';
+import 'package:rikodmy/ui/ledger/screen/ledger_screen_expenses.dart';
 import 'package:rikodmy/utils/utils.dart';
 
 class TabbarLedger extends StatefulWidget {

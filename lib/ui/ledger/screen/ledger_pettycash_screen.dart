@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:rikodmy/ui/ledger/detail/ledger_pettycash_detail.dart';
 import 'package:rikodmy/widget/list_item/petty_cash_item.dart';
 
-import '../../models/expenses_data.dart';
-import '../../models/petty_cash_data.dart';
-import 'add_data_ledger.dart';
+import '../../../models/expenses_data.dart';
+import '../../../models/petty_cash_data.dart';
+import '../add_data_ledger.dart';
 
 class LedgerPettyCashScreen extends StatefulWidget {
   final String title;
@@ -23,7 +24,8 @@ class _LedgerPettyCashScreenState extends State<LedgerPettyCashScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return const AddDataLedger(title: 'Add Petty Cash Data', text: 'Petty Cash');
+            return const AddDataLedger(
+                title: 'Add Petty Cash Data', text: 'Petty Cash');
           }));
         },
         backgroundColor: const Color(0xff2360AD),
@@ -42,7 +44,11 @@ class _LedgerPettyCashScreenState extends State<LedgerPettyCashScreen> {
                       ledgerPettyCashList[index];
                   return InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, '/ledgerPettyCashDetail');
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                          final LedgerPettyCash pettyCash = ledgerPettyCashList[index];
+                        return LedgerPettyCashDetail(pettyCash: pettyCash);
+                      }));
                     },
                     child: PettyCashItem(ledgerPettyCash: ledgerPettyCash),
                   );

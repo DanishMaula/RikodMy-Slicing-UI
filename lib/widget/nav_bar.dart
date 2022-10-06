@@ -4,7 +4,7 @@ import 'package:rikodmy/ui/ledger/tabbar_ledger.dart';
 import '../../ui/customer/customer_screen.dart';
 import '../../ui/history/history_screen.dart';
 import '../../ui/home/home_screen.dart';
-import '../ui/ledger/ledger_screen_expenses.dart';
+import '../ui/ledger/screen/ledger_screen_expenses.dart';
 import '../../ui/profile/ProfileScreen.dart';
 
 class NavBar extends StatefulWidget {
