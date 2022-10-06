@@ -109,7 +109,7 @@ class _CartScreenState extends State<CartScreen> {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(width: 10),
+                                    
                                     SizedBox(
                                       height: 45,
                                       width: 145,
@@ -379,6 +379,7 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                               content: Text(
                                 'Do you want to make quotation?',
+                                textAlign: TextAlign.center,
                                 style: titleDialog,
                               ),
                               actions: <Widget>[
@@ -404,26 +405,32 @@ class _CartScreenState extends State<CartScreen> {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(width: 10),
-                                    SizedBox(
-                                      height: 45,
-                                      width: 145,
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            border: Border.all(
-                                                color: Color(0xffE0E0E0))),
-                                        child: MaterialButton(
-                                          onPressed: () {
-                                            Navigator.pushNamed(context,
-                                                '/completeTransactionCash');
-                                          },
-                                          child: Text(
-                                            'Go to payment',
-                                            style: buttonPaymentDialog,
-                                            maxLines: 1,
+                                    Expanded(
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          SizedBox(
+                                            height: 45,
+                                            width: 145,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  border: Border.all(
+                                                      color: const Color(0xffE0E0E0))),
+                                              child: MaterialButton(
+                                                onPressed: () {
+                                                  Navigator.pushNamed(context,
+                                                      '/completeTransactionCash');
+                                                },
+                                                child: Text(
+                                                  'Go to payment',
+                                                  style: buttonPaymentDialog,
+                                                  
+                                                ),
+                                              ),
+                                            ),
                                           ),
-                                        ),
+                                        ],
                                       ),
                                     ),
                                   ],

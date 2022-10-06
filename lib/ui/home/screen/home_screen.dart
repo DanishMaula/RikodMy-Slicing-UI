@@ -24,28 +24,39 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    const CircleAvatar(
-                      radius: 30,
-                      backgroundImage: AssetImage('assets/images/logo_udc.png'),
-                    ),
-                    const SizedBox(width: 10),
-                    Text('IBIJUGIL COMPANY',
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('assets/images/logo_udc.png'),
+                        ),
+                        const SizedBox(width: 5),
+                      Text('IBIJUGIL COMPANY',
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                             fontSize: 16)),
-                    const SizedBox(width: 46),
-                    ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xff2360AD),
-                        ),
-                        onPressed: () {
+                      ],
+                    ),
+                    
+                    
+                    MaterialButton(
+                       color: const Color(0xff2360AD),
+                       shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                  
+                       ),
+                        child: Text('RM 322.52', style: cartButton),
+                       onPressed: () {
                           Navigator.pushNamed(context, '/cartScreen');
                         },
-                        child: Text('RM 322.52', style: cartButton))
+                        ),
+                        
+                       
                   ],
                 ),
                 const SizedBox(height: 10),

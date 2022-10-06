@@ -39,45 +39,41 @@ class _NavBarState extends State<NavBar> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: _selectedIndex == 0 ? Colors.blueAccent : Colors.grey,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.monetization_on,
-              color: _selectedIndex == 1 ? Colors.blueAccent : Colors.grey,
             ),
             label: 'Ledger',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.bookmark,
-              color: _selectedIndex == 2 ? Colors.blueAccent : Colors.grey,
             ),
             label: 'History',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.people,
-              color: _selectedIndex == 3 ? Colors.blueAccent : Colors.grey,
             ),
             label: 'Customer',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
-              color: _selectedIndex == 4 ? Colors.blueAccent : Colors.grey,
             ),
             label: 'Profile',
           ),
         ],
         onTap: _onItemTapped,
-        selectedItemColor: Colors.blueAccent,
+        selectedItemColor: const Color(0xff2360AD),
+        unselectedItemColor: const Color(0xff828282),
       ),
     );
   }

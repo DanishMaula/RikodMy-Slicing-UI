@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/models/history_data.dart';
-import 'package:rikodmy/utils/utils.dart';
 
-class HistoryCashTransferDetail extends StatefulWidget {
+import '../../../utils/utils.dart';
+
+class HistoryQuotationDetail extends StatefulWidget {
   final HistoryData historyData;
 
-  const HistoryCashTransferDetail({super.key, required this.historyData});
+  const HistoryQuotationDetail({super.key, required this.historyData});
 
   @override
-  State<HistoryCashTransferDetail> createState() =>
-      _HistoryCashTransferDetailState();
+  State<HistoryQuotationDetail> createState() => _HistoryQuotationDetailState();
 }
 
-class _HistoryCashTransferDetailState extends State<HistoryCashTransferDetail> {
+class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -174,7 +174,7 @@ class _HistoryCashTransferDetailState extends State<HistoryCashTransferDetail> {
               offset: const Offset(0, 3), // changes position of shadow
             ),
           ]),
-          height: 100,
+          height: 94,
           child: Column(
             children: [
               Padding(
@@ -196,76 +196,40 @@ class _HistoryCashTransferDetailState extends State<HistoryCashTransferDetail> {
                 ),
               ),
               Expanded(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Color(0xffEB5757),
-                  ),
-                  width: double.infinity,
-                  height: 50,
-                  child: MaterialButton(
-                    onPressed: () {
-                      showModalBottomSheet(
-                          context: context,
-                          builder: (context) {
-                            return Expanded(
-                              child: SizedBox(
-                                height: 285,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Divider(
-                                      color: Colors.grey,
-                                      thickness: 2,
-                                      endIndent: 170,
-                                      indent: 170,
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 20, right: 20),
-                                      child: Text('Reason',
-                                          style: dialogHistoryVoidTitle),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 20, right: 20),
-                                      child: Flexible(
-                                        flex: 2,
-                                        child: Container(
-                                            height: 150,
-                                            width: double.infinity,
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                border: Border.all(
-                                                    color:
-                                                        const Color(0xffE0E0E0))),
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 10, right: 10, top: 10),
-                                              child: Text(
-                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                                                style: dialogHistoryReason,
-                                              ),
-                                            )),
-                                      ),
-                                    ),
-                                    MaterialButton(
-                                      onPressed: () {},
-                                      height: 50,
-                                      color: const Color(0xffEB5757),
-                                      minWidth: double.infinity,
-                                      child: Text('Submit Reason',
-                                          style: addCart),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            );
-                          });
-                    },
-                    child: Text('VOID SALES', style: completePayment),
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      flex: 2,
+                      fit: FlexFit.tight,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          color: Color(0xffEB5757),
+                        ),
+                        width: MediaQuery.of(context).size.width / 2,
+                        height: 50,
+                        child: MaterialButton(
+                          onPressed: () { },
+                          child: Text('VOID SALES', style: completePayment),
+                        ),
+                      ),
+                    ),
+                    Flexible(
+                      flex: 2,
+                      fit: FlexFit.tight,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          color: Color(0xff2360AD),
+                        ),
+                        width: MediaQuery.of(context).size.width / 2,
+                        height: 50,
+                        child: MaterialButton(
+                          onPressed: () { },
+                          child: Text('INVOICE', style: completePayment),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               )
             ],
