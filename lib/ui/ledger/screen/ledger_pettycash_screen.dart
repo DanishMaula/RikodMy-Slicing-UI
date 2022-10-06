@@ -6,7 +6,7 @@ import 'package:rikodmy/widget/list_item/petty_cash_item.dart';
 
 import '../../../models/expenses_data.dart';
 import '../../../models/petty_cash_data.dart';
-import '../add_data_ledger.dart';
+import 'add_data_ledger.dart';
 
 class LedgerPettyCashScreen extends StatefulWidget {
   final String title;

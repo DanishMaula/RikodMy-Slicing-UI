@@ -7,7 +7,7 @@ import 'package:rikodmy/ui/cart/cart_screen.dart';
 import 'package:rikodmy/ui/cart/transaction/completed_transaction_cash.dart';
 import 'package:rikodmy/ui/cart/transaction/completed_transaction_quotation.dart';
 import 'package:rikodmy/ui/cart/transaction/file_result.dart';
-import 'package:rikodmy/ui/home/home_screen.dart';
+import 'package:rikodmy/ui/home/screen/home_screen.dart';
 import 'package:rikodmy/ui/login/login_screen.dart';
 import 'package:rikodmy/widget/nav_bar.dart';
 

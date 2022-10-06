@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rikodmy/models/expenses_data.dart';
-import 'package:rikodmy/ui/ledger/add_data_ledger.dart';
+import 'package:rikodmy/ui/ledger/screen/add_data_ledger.dart';
 import 'package:rikodmy/ui/ledger/detail/ledger_expenses_detail.dart';
 import 'package:rikodmy/widget/list_item/expenses_item.dart';
 

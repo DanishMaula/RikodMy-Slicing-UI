@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rikodmy/widget/search_bar.dart';
 import 'package:rikodmy/ui/home/tabbar_menu.dart';
 
-import '../../utils/utils.dart';
+import '../../../utils/utils.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
