@@ -288,3 +288,28 @@ TextStyle tabbarHistoryMenu = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   fontSize: 12,
 );
+
+TextStyle historyItemCode = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontWeight: FontWeight.w500,
+  fontSize: 12,
+);
+
+TextStyle historyItemName = GoogleFonts.poppins(
+  color: const Color(0xff4F4F4F),
+  fontWeight: FontWeight.bold,
+  fontSize: 18,
+);
+
+TextStyle historyItemPrice = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.w600,
+  fontSize: 14,
+);
+
+TextStyle historyItemDateClock = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontWeight: FontWeight.w600,
+  fontSize: 11,
+);
+

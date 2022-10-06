@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:rikodmy/ui/history/screen/cash_sceen.dart';
 
 import '../../utils/utils.dart';
 
@@ -40,7 +41,7 @@ class _TabbarHistoryState extends State<TabbarHistory>
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 15),
+        padding: const EdgeInsets.only(top: 15, bottom: 15),
         child: Column(
           children: [
             // give the tab bar a height [can change hheight to preferred height]
@@ -85,9 +86,7 @@ class _TabbarHistoryState extends State<TabbarHistory>
               child: TabBarView(
                 controller: _tabController,
                 children: const [
-                  Center(
-                    child: Text('Sales'),
-                  ),
+                 CashScreen(),
                   Center(
                     child: Text('Purchase'),
                   ),

@@ -84,6 +84,6 @@ class _PettyCashItemState extends State<PettyCashItem> {
           ),
         ),
       ),
-    );;
+    );
   }
 }

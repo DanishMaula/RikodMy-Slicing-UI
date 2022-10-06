@@ -16,7 +16,7 @@ class HistoryData {
   });
 }
 
-List<HistoryData> HistoryDataList = [
+List<HistoryData> historyDataList = [
   HistoryData(
     code: '#TP1230000724',
     date: '07.10.2021',
