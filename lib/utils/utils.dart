@@ -177,7 +177,7 @@ TextStyle star = GoogleFonts.poppins(
 TextStyle nameNumber = GoogleFonts.poppins(
   color: const Color(0xff333333),
   fontWeight: FontWeight.w500,
-  fontSize: 14,
+  fontSize: 15,
 );
 
 TextStyle nameNumberValue = GoogleFonts.poppins(
@@ -312,4 +312,24 @@ TextStyle historyItemDateClock = GoogleFonts.poppins(
   fontWeight: FontWeight.w600,
   fontSize: 11,
 );
+
+TextStyle historyDetailsPrice = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w700,
+  fontSize: 16,
+);
+
+TextStyle dialogHistoryVoidTitle = GoogleFonts.poppins(
+  color: const Color(0xffEB5757),
+  fontWeight: FontWeight.bold,
+  fontSize: 18,
+);
+
+
+TextStyle dialogHistoryReason = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontWeight: FontWeight.w500,
+  fontSize: 13,
+);
+
 
