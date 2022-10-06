@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/ui/history/screen/cash_sceen.dart';
+import 'package:rikodmy/ui/history/screen/transfer_screen.dart';
+import 'package:rikodmy/ui/history/screen/unpaid_screen.dart';
+import 'package:rikodmy/ui/history/screen/void_sales.dart';
 
 import '../../utils/utils.dart';
+import 'screen/quotation_screen.dart';
 
 // make tabbar
 class TabbarHistory extends StatefulWidget {
@@ -60,12 +64,15 @@ class _TabbarHistoryState extends State<TabbarHistory>
               ),
               labelColor: const Color(0xff333333),
               unselectedLabelColor: const Color(0xff333333),
-              tabs:   [
+              tabs: [
                 Tab(
                   child: Text('CASH', style: tabbarHistoryMenu),
                 ),
                 Tab(
-                  child: Text('TRANSFER', style: tabbarHistoryMenu,),
+                  child: Text(
+                    'TRANSFER',
+                    style: tabbarHistoryMenu,
+                  ),
                 ),
                 Tab(
                   child: Text('QUOTATION', style: tabbarHistoryMenu),
@@ -76,9 +83,6 @@ class _TabbarHistoryState extends State<TabbarHistory>
                 Tab(
                   child: Text('VOID SALES', style: tabbarHistoryMenu),
                 ),
-                
-
-                
               ],
             ),
             // tab bar view here
@@ -86,19 +90,11 @@ class _TabbarHistoryState extends State<TabbarHistory>
               child: TabBarView(
                 controller: _tabController,
                 children: const [
-                 CashScreen(),
-                  Center(
-                    child: Text('Purchase'),
-                  ),
-                  Center(
-                    child: Text('Purchase'),
-                  ),
-                  Center(
-                    child: Text('Purchase'),
-                  ),
-                  Center(
-                    child: Text('Purchase'),
-                  ),
+                  CashScreen(),
+                  TransferScreen(),
+                  QuotationScreen(),
+                  UnpaidScreen(),
+                  VoidSalesScreen()
                 ],
               ),
             ),

@@ -24,7 +24,7 @@ class _HistoryItemState extends State<HistoryItem> {
         ),
         child: Container(
           decoration: BoxDecoration(
-               borderRadius: BorderRadius.circular(10),
+               
                border: Border.all(color: const Color(0xffE0E0E0), 
                width: 2.0)
                ),
