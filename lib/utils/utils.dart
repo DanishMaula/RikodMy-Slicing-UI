@@ -325,11 +325,16 @@ TextStyle dialogHistoryVoidTitle = GoogleFonts.poppins(
   fontSize: 18,
 );
 
-
 TextStyle dialogHistoryReason = GoogleFonts.poppins(
   color: const Color(0xff828282),
   fontWeight: FontWeight.w500,
   fontSize: 13,
+);
+
+TextStyle dialogUnpaidTitle = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.bold,
+  fontSize: 18,
 );
 
 

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:rikodmy/models/history_data.dart';
 
+import '../../../models/history_data.dart';
 import '../../../utils/utils.dart';
 
-class HistoryQuotationDetail extends StatefulWidget {
+class HistoryUnpaidDetail extends StatefulWidget {
   final HistoryData historyData;
 
-  const HistoryQuotationDetail({super.key, required this.historyData});
+  const HistoryUnpaidDetail({super.key, required this.historyData});
 
   @override
-  State<HistoryQuotationDetail> createState() => _HistoryQuotationDetailState();
+  State<HistoryUnpaidDetail> createState() => _HistoryUnpaidDetailState();
 }
 
-class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
+class _HistoryUnpaidDetailState extends State<HistoryUnpaidDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -174,7 +174,7 @@ class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
               offset: const Offset(0, 3), // changes position of shadow
             ),
           ]),
-          height: 94,
+          height: 100,
           child: Column(
             children: [
               Padding(
@@ -195,40 +195,72 @@ class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
                 ),
               ),
               Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Flexible(
-                      flex: 2,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Color(0xffEB5757),
-                        ),
-                        width: MediaQuery.of(context).size.width / 2,
-                        height: 50,
-                        child: MaterialButton(
-                          onPressed: () { },
-                          child: Text('VOID SALES', style: completePayment),
-                        ),
-                      ),
-                    ),
-                    Flexible(
-                      flex: 2,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Color(0xff2360AD),
-                        ),
-                        width: MediaQuery.of(context).size.width / 2,
-                        height: 50,
-                        child: MaterialButton(
-                          onPressed: () { },
-                          child: Text('INVOICE', style: completePayment),
-                        ),
-                      ),
-                    ),
-                  ],
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Color(0xff2360AD),
+                  ),
+                  width: double.infinity,
+                  height: 50,
+                  child: MaterialButton(
+                    onPressed: () {
+                      showModalBottomSheet(
+                        
+                          isScrollControlled: true,
+                          context: context,
+                          builder: (context) {
+                            return Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 20, right: 20, top: 20, bottom: 20),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Choose Payment',
+                                      style: dialogUnpaidTitle),
+                                  const SizedBox(height: 20),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      MaterialButton(
+                                        height: 50,
+                                        color: const Color(0xff2360AD),
+                                        minWidth:
+                                            115,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Cash',
+                                          style: completePayment,
+                                        ),
+                                      ),
+                                      MaterialButton(
+                                        height: 50,
+                                        minWidth:
+                                          115,
+                                        color: const Color(0xff27AE60),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Transfer',
+                                          style: completePayment,
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            );
+                          });
+                    },
+                    child: Text('PAY NOW', style: completePayment),
+                  ),
                 ),
               )
             ],
