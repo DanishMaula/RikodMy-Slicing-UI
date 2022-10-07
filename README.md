@@ -1,4 +1,4 @@
-# rikodmy
+# RikodMy
 
 A new Flutter project.
 
