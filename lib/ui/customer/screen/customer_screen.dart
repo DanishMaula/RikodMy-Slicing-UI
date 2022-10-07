@@ -6,8 +6,8 @@ import 'package:rikodmy/ui/customer/detail/customer_detail.dart';
 import 'package:rikodmy/utils/utils.dart';
 import 'package:rikodmy/widget/search_bar.dart';
 
-import '../../models/data_customer.dart';
-import '../../widget/list_item/customer_item.dart';
+import '../../../models/data_customer.dart';
+import '../../../widget/list_item/customer_item.dart';
 
 class CustomerScreen extends StatefulWidget {
   const CustomerScreen({super.key});

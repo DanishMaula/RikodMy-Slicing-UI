@@ -38,18 +38,82 @@ class _CustomerDetailState extends State<CustomerDetail> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: CircleAvatar(
-                radius: 70,
-                backgroundImage: Image.network(widget.allCustomer.image).image,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: CircleAvatar(
+                  radius: 70,
+                  backgroundImage: Image.network(widget.allCustomer.image).image,
+                ),
               ),
-            ),
-            const SizedBox(height: 30),
-            Text('Name', style: nameNumber),
-          ],
+              const SizedBox(height: 30),
+              Text('Name', style: nameNumber),
+              const SizedBox(height: 5),
+              Container(
+                      width: double.infinity,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        border:
+                            Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding:
+                            const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                        child: Text(widget.allCustomer.name, style: nameNumberValue),
+                      )),
+              const SizedBox(height: 15),
+              Text('Phone Number', style: nameNumber),
+              const SizedBox(height: 5),
+              Container(
+                      width: double.infinity,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        border:
+                            Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding:
+                            const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                        child: Text(widget.allCustomer.phoneNumber, style: nameNumberValue),
+                      )),
+              const SizedBox(height: 15),
+              Text('Email', style: nameNumber),
+              const SizedBox(height: 5),
+              Container(
+                      width: double.infinity,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        border:
+                            Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding:
+                            const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                        child: Text(widget.allCustomer.email, style: nameNumberValue),
+                      )),
+              const SizedBox(height: 15),
+              Text('Address', style: nameNumber),
+              const SizedBox(height: 5),
+              Container(
+                      width: double.infinity,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        border:
+                            Border.all(color: const Color(0xffE0E0E0), width: 1.5),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding:
+                            const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                        child: Text(widget.allCustomer.address, style: nameNumberValue),
+                      )),
+            ],
+          ),
         ),
       )
     );

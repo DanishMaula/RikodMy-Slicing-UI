@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rikodmy/ui/history/tabbar_history.dart';
 import 'package:rikodmy/ui/ledger/tabbar_ledger.dart';
 
-import '../../ui/customer/customer_screen.dart';
+import '../ui/customer/screen/customer_screen.dart';
 import '../ui/home/screen/home_screen.dart';
 import '../ui/ledger/screen/ledger_screen_expenses.dart';
 import '../../ui/profile/ProfileScreen.dart';
