@@ -204,20 +204,21 @@ class _HistoryCashTransferDetailState extends State<HistoryCashTransferDetail> {
                   height: 50,
                   child: MaterialButton(
                     onPressed: () {
-                      showModalBottomSheet(
+                      showModalBottomSheet<dynamic>(
+                          isScrollControlled: true,
                           context: context,
                           builder: (context) {
                             return Expanded(
-                              child: SizedBox(
-                                height: 285,
+                              child: SizedBox(            
                                 child: Column(
+                                  mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     const Divider(
                                       color: Colors.grey,
                                       thickness: 2,
-                                      endIndent: 170,
-                                      indent: 170,
+                                      endIndent: 180,
+                                      indent: 180
                                     ),
                                     const SizedBox(height: 10),
                                     Padding(
@@ -250,6 +251,7 @@ class _HistoryCashTransferDetailState extends State<HistoryCashTransferDetail> {
                                             )),
                                       ),
                                     ),
+                                    const SizedBox(height: 25),
                                     MaterialButton(
                                       onPressed: () {},
                                       height: 50,
