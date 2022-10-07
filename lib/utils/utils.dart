@@ -337,4 +337,9 @@ TextStyle dialogUnpaidTitle = GoogleFonts.poppins(
   fontSize: 18,
 );
 
+TextStyle buttonTextVoidSales = GoogleFonts.poppins(
+  color: const Color(0xffBDBDBD),
+  fontWeight: FontWeight.bold,
+  fontSize: 16,
+);
 

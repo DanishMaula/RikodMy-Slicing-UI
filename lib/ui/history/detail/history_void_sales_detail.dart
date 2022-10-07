@@ -5,16 +5,16 @@ import 'package:rikodmy/models/history_data.dart';
 
 import '../../../utils/utils.dart';
 
-class HistoryQuotationDetail extends StatefulWidget {
+class HistoryVoidSalesDetail extends StatefulWidget {
   final HistoryData historyData;
 
-  const HistoryQuotationDetail({super.key, required this.historyData});
+  const HistoryVoidSalesDetail({super.key, required this.historyData});
 
   @override
-  State<HistoryQuotationDetail> createState() => _HistoryQuotationDetailState();
+  State<HistoryVoidSalesDetail> createState() => _HistoryVoidSalesDetailState();
 }
 
-class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
+class _HistoryVoidSalesDetailState extends State<HistoryVoidSalesDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,7 +102,7 @@ class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Unpaid',
+                                    'Cash',
                                     style: historyItemPrice,
                                   ),
                                   Text(
@@ -122,46 +122,60 @@ class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
             ),
             const SizedBox(height: 20),
             Text('Product', style: nameNumber),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 10,
-                  right: 15,
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    ClipRRect(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      child: Image.asset(
-                        'assets/images/xiaomi.png',
-                        height: 80,
-                        width: 80,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 15),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Xiao Mi Yi || 4K',
-                            style: itemName,
-                          ),
-                          Text(
-                            'Stock : 15',
-                            style: notesStyle,
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 10,
+                right: 15,
               ),
-            )
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  ClipRRect(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                    child: Image.asset(
+                      'assets/images/xiaomi.png',
+                      height: 80,
+                      width: 80,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, top: 15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Xiao Mi Yi || 4K',
+                          style: itemName,
+                        ),
+                        Text(
+                          'Stock : 15',
+                          style: notesStyle,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            Text('Reason', style: nameNumber),
+            const SizedBox(height: 5),
+            Container(
+                height: 100,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: const Color(0xffE0E0E0))),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+                  child: Text(
+                    'Ada keperluan mendadak',
+                    style: dialogHistoryReason,
+                  ),
+                )),
           ],
         ),
       ),
@@ -174,7 +188,7 @@ class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
               offset: const Offset(0, 3), // changes position of shadow
             ),
           ]),
-          height: 94,
+          height: 100,
           child: Column(
             children: [
               Padding(
@@ -195,40 +209,16 @@ class _HistoryQuotationDetailState extends State<HistoryQuotationDetail> {
                 ),
               ),
               Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Flexible(
-                      flex: 2,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Color(0xffEB5757),
-                        ),
-                        width: MediaQuery.of(context).size.width / 2,
-                        height: 50,
-                        child: MaterialButton(
-                          onPressed: () { },
-                          child: Text('VOID SALES', style: completePayment),
-                        ),
-                      ),
-                    ),
-                    Flexible(
-                      flex: 2,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Color(0xff2360AD),
-                        ),
-                        width: MediaQuery.of(context).size.width / 2,
-                        height: 50,
-                        child: MaterialButton(
-                          onPressed: () { },
-                          child: Text('INVOICE', style: completePayment),
-                        ),
-                      ),
-                    ),
-                  ],
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Color(0xffEBEBEB),
+                  ),
+                  width: double.infinity,
+                  height: 50,
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: Text('PAY NOW', style: buttonTextVoidSales),
+                  ),
                 ),
               )
             ],

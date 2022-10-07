@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/ui/history/screen/cash_sceen.dart';
 import 'package:rikodmy/ui/history/screen/transfer_screen.dart';
 import 'package:rikodmy/ui/history/screen/unpaid_screen.dart';
-import 'package:rikodmy/ui/history/screen/void_sales.dart';
+import 'package:rikodmy/ui/history/screen/void_sales_screen.dart';
 
 import '../../utils/utils.dart';
 import 'screen/quotation_screen.dart';
