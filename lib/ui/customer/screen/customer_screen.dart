@@ -31,7 +31,9 @@ class _CustomerScreenState extends State<CustomerScreen> {
             preferredSize: Size.fromHeight(50), child: SearchCustomer()),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/add_customer');
+        },
         backgroundColor: const Color(0xff2360AD),
         child: const Icon(Icons.add),
       ),

@@ -94,7 +94,7 @@ bool _isObscure = true;
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    child: Container(
+                    child: SizedBox(
                       width: double.infinity,
                       height: 50,
                       child: Center(

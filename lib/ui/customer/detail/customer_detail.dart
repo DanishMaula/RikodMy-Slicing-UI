@@ -61,7 +61,7 @@ class _CustomerDetailState extends State<CustomerDetail> {
                       ),
                       child: Padding(
                         padding:
-                            const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                            const EdgeInsets.only(left: 10, top: 10, bottom: 10, right: 10),
                         child: Text(widget.allCustomer.name, style: nameNumberValue),
                       )),
               const SizedBox(height: 15),
@@ -109,7 +109,7 @@ class _CustomerDetailState extends State<CustomerDetail> {
                       ),
                       child: Padding(
                         padding:
-                            const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                            const EdgeInsets.only(left: 10, top: 10, bottom: 10, right: 10),
                         child: Text(widget.allCustomer.address, style: nameNumberValue),
                       )),
             ],

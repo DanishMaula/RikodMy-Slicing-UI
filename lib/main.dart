@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rikodmy/models/all_product_data.dart';
 import 'package:rikodmy/models/expenses_data.dart';
+import 'package:rikodmy/ui/customer/screen/add_customer.dart';
 import 'package:rikodmy/ui/home/details/product_detail.dart';
 import 'package:rikodmy/ui/cart/cart_no_data.dart';
 import 'package:rikodmy/ui/cart/cart_screen.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/fileResult':(context) => const FileResult(),
         '/searchCustomer':(context) => const SearchCustomer(),
         '/cartNoData': (context) => const CartNoData(),
+        '/add_customer': (context) => const AddCustomer(),
         
       },
     );
