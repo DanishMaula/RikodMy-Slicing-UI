@@ -87,7 +87,7 @@ class _CartScreenState extends State<CartScreen> {
                               actions: <Widget>[
                                 Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     SizedBox(
                                       height: 45,
@@ -109,7 +109,7 @@ class _CartScreenState extends State<CartScreen> {
                                         ),
                                       ),
                                     ),
-                                    
+    
                                     SizedBox(
                                       height: 45,
                                       width: 145,
@@ -385,7 +385,7 @@ class _CartScreenState extends State<CartScreen> {
                               actions: <Widget>[
                                 Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     SizedBox(
                                       height: 45,
@@ -405,33 +405,31 @@ class _CartScreenState extends State<CartScreen> {
                                         ),
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          SizedBox(
-                                            height: 45,
-                                            width: 145,
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                  color: Colors.white,
-                                                  border: Border.all(
-                                                      color: const Color(0xffE0E0E0))),
-                                              child: MaterialButton(
-                                                onPressed: () {
-                                                  Navigator.pushNamed(context,
-                                                      '/completeTransactionCash');
-                                                },
-                                                child: Text(
-                                                  'Go to payment',
-                                                  style: buttonPaymentDialog,
-                                                  
-                                                ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        SizedBox(
+                                          height: 45,
+                                          width: 145,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                border: Border.all(
+                                                    color: const Color(0xffE0E0E0))),
+                                            child: MaterialButton(
+                                              onPressed: () {
+                                                Navigator.pushNamed(context,
+                                                    '/completeTransactionCash');
+                                              },
+                                              child: Text(
+                                                'Go to payment',
+                                                style: buttonPaymentDialog,
+                                                
                                               ),
                                             ),
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 )

@@ -343,3 +343,38 @@ TextStyle buttonTextVoidSales = GoogleFonts.poppins(
   fontSize: 16,
 );
 
+TextStyle nameProfile = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.bold,
+  fontSize: 18,
+);
+
+TextStyle phoneNumberProfile = GoogleFonts.poppins(
+  color: const Color(0xff333333),
+  fontWeight: FontWeight.w400,
+  fontSize: 13,
+);
+
+TextStyle titleProfileInfo = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.w400,
+  fontSize: 13,
+);
+
+TextStyle BalanceInfoProfile = GoogleFonts.poppins(
+  color: const Color(0xffffffff),
+  fontWeight: FontWeight.w600,
+  fontSize: 18,
+);
+
+TextStyle titleAbout = GoogleFonts.poppins(
+  color: const Color(0xff000000),
+  fontWeight: FontWeight.w600,
+  fontSize: 14,
+);
+
+TextStyle aboutContent = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontWeight: FontWeight.w600,
+  fontSize: 13,
+);

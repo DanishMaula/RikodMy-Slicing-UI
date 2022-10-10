@@ -5,7 +5,7 @@ import 'package:rikodmy/ui/ledger/tabbar_ledger.dart';
 import '../ui/customer/screen/customer_screen.dart';
 import '../ui/home/screen/home_screen.dart';
 import '../ui/ledger/screen/ledger_screen_expenses.dart';
-import '../../ui/profile/ProfileScreen.dart';
+import '../ui/profile/screen/ProfileScreen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);

@@ -25,3 +25,17 @@ class CustomBg extends CustomPainter {
     return false;
   }
 }
+
+class CustomCircle extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    
+
+    
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
+}

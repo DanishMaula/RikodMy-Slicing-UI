@@ -34,6 +34,7 @@ class _TabbarLedgerState extends State<TabbarLedger>
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        centerTitle: true,
         title: Text(
           'Ledger',
           style: title,

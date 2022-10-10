@@ -44,8 +44,6 @@ dependencies:
 flutter_native_splash:
   color: "#ffffff"
   image: assets/images/splash_screen.png
-  width: 50
-  height: 50
 
 
 dev_dependencies:
