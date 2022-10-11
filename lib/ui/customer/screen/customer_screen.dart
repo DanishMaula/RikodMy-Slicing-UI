@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/ui/customer/detail/customer_detail.dart';
 import 'package:rikodmy/utils/utils.dart';
-import 'package:rikodmy/widget/search_bar.dart';
+import 'package:rikodmy/widget/others/search_bar.dart';
 
 import '../../../models/data_customer.dart';
 import '../../../widget/list_item/customer_item.dart';

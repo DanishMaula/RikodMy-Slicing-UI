@@ -3,8 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rikodmy/utils/utils.dart';
-import 'package:rikodmy/widget/custom_bg.dart';
-import 'package:rikodmy/widget/nav_bar.dart';
+import 'package:rikodmy/widget/others/custom_bg.dart';
+import 'package:rikodmy/widget/others/nav_bar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

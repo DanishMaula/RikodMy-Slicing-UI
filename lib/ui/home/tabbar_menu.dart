@@ -72,6 +72,7 @@ class _TabBarMenuState extends State<TabBarMenu>
             indicator: const BubbleTabIndicator(
                 indicatorHeight: 30.0,
                 indicatorColor: Color(0xff2360AD),
+                
                 tabBarIndicatorSize: TabBarIndicatorSize.tab),
             isScrollable: true,
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rikodmy/widget/search_bar.dart';
+import 'package:rikodmy/widget/others/search_bar.dart';
 import 'package:rikodmy/ui/home/tabbar_menu.dart';
 
 import '../../../utils/utils.dart';

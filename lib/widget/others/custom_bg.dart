@@ -5,17 +5,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class CustomBg extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint();
-    paint.color = const Color(0xff1C67B2);
-    paint.style = PaintingStyle.fill;
+    // paint a curve that starts from the top left and ends at the bottom right
+    final paint = Paint()
+      ..color = const Color(0xff1C67B2)
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 5;
     final path = Path();
-    path.moveTo(0, size.height * 0.25);
-    path.quadraticBezierTo(size.width * 0.25, size.height * 0.20,
-        size.width * 0.5, size.height * 0.25);
-    path.quadraticBezierTo(
-        size.width * 0.75, size.height * 0.30, size.width, size.height * 0.25);
-    path.lineTo(size.width, 0);
-    path.lineTo(0, 0);
+    path.moveTo(0, 0.45 * size.height );
+    path.quadraticBezierTo(size.width  , size.height / 2, size.width  , size.height / 10);
+    path.lineTo(size.width , size.height);
+    path.lineTo(0, size.height);
     path.close();
     canvas.drawPath(path, paint);
   }
@@ -28,11 +27,7 @@ class CustomBg extends CustomPainter {
 
 class CustomCircle extends CustomPainter {
   @override
-  void paint(Canvas canvas, Size size) {
-    
-
-    
-  }
+  void paint(Canvas canvas, Size size) {}
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {

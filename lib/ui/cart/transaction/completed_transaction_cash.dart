@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import '../../../utils/utils.dart';
-import '../../../widget/search_bar.dart';
+import '../../../widget/others/search_bar.dart';
 
 class CompleteTransactionCash extends StatefulWidget {
   const CompleteTransactionCash({super.key});

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/ui/home/screen/home_screen.dart';
-import 'package:rikodmy/widget/nav_bar.dart';
+import 'package:rikodmy/widget/others/nav_bar.dart';
 
 import '../../../utils/utils.dart';
 

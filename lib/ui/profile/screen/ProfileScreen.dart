@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:rikodmy/widget/custom_bg.dart';
+import 'package:rikodmy/widget/others/custom_bg.dart';
 
 import '../../../utils/utils.dart';
 
