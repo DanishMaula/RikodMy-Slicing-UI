@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/models/all_product_data.dart';
-import 'package:rikodmy/ui/cart/cart_no_data.dart';
+import 'package:rikodmy/ui/cart/screen/cart_no_data.dart';
 
-import '../../utils/utils.dart';
+import '../../../utils/utils.dart';
 
 class CartScreen extends StatefulWidget {
   final AllProduct allProduct;
@@ -91,7 +91,7 @@ class _CartScreenState extends State<CartScreen> {
                                   children: [
                                     SizedBox(
                                       height: 45,
-                                      width: 145,
+                                      width: 130,
                                       child: Container(
                                         decoration: BoxDecoration(
                                           color: Colors.white,
@@ -109,10 +109,11 @@ class _CartScreenState extends State<CartScreen> {
                                         ),
                                       ),
                                     ),
-    
+                                    const SizedBox(width: 10),
+
                                     SizedBox(
                                       height: 45,
-                                      width: 145,
+                                      width: 130,
                                       child: Container(
                                         decoration: const BoxDecoration(
                                           color: Color(0xff2360AD),
@@ -306,7 +307,7 @@ class _CartScreenState extends State<CartScreen> {
                                       ),
                                       Padding(
                                         padding:
-                                            EdgeInsets.only(top: 16, bottom: 5),
+                                            const EdgeInsets.only(top: 16, bottom: 5),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -316,7 +317,7 @@ class _CartScreenState extends State<CartScreen> {
                                               style: itemStock,
                                             ),
                                             Text(
-                                              widget.allProduct.price,
+                                              'RM 122.16',
                                               style: itemPrice,
                                             )
                                           ],
@@ -385,11 +386,11 @@ class _CartScreenState extends State<CartScreen> {
                               actions: <Widget>[
                                 Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceAround,
                                   children: [
                                     SizedBox(
                                       height: 45,
-                                      width: 145,
+                                      width: 130,
                                       child: Container(
                                         decoration: const BoxDecoration(
                                             color: Color(0xff2360AD)),
@@ -410,7 +411,7 @@ class _CartScreenState extends State<CartScreen> {
                                       children: [
                                         SizedBox(
                                           height: 45,
-                                          width: 145,
+                                          width: 130,
                                           child: Container(
                                             decoration: BoxDecoration(
                                                 color: Colors.white,

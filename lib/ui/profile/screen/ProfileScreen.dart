@@ -52,7 +52,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     flex: 1,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xff2360AD),
+                        image: const DecorationImage(
+                          image: AssetImage('assets/images/bg_cash_in_hand.png'),
+                          fit: BoxFit.cover,
+                        ),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       height: 80,
@@ -79,7 +82,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     flex: 1,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xff27AE60),
+                        image: const DecorationImage(
+                          image: AssetImage('assets/images/bg_transfer.png'),
+                          fit: BoxFit.cover,
+                        ),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       height: 80,
@@ -106,7 +112,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: 80,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: const Color(0xffEB5757),
+                  image: const DecorationImage(
+                    image: AssetImage('assets/images/bg_unpaid.png'),
+                    fit: BoxFit.cover,
+                  ),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(

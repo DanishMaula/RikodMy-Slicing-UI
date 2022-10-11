@@ -43,9 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     
-                    
                     MaterialButton(
                        color: const Color(0xff2360AD),
+                       minWidth: 10,
                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5),
                   
