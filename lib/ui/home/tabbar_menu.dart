@@ -116,7 +116,7 @@ class _TabBarMenuState extends State<TabBarMenu>
               indicatorColor: Color(0xff2360AD),
               tabBarIndicatorSize: TabBarIndicatorSize.label,
             ),
-            indicatorPadding:  const EdgeInsets.only(left: 10, right: 10,),
+            indicatorPadding: const EdgeInsets.only(left:10.8, right: 10.8,),
             isScrollable: true,
           ),
           const SizedBox(

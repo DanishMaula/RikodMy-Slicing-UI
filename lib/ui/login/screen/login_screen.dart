@@ -105,6 +105,7 @@ bool _isObscure = true;
                   const SizedBox(height: 20),
                   Center(
                     child: Text(
+                      
                       '"if you forgot you password please contact your\n admin company to change password immediately"',
                       style: italicInfo,
                     ),

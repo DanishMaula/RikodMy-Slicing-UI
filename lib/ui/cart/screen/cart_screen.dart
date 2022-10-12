@@ -89,57 +89,62 @@ class _CartScreenState extends State<CartScreen> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    SizedBox(
-                                      height: 45,
-                                      width: 130,
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          border: Border.all(
-                                              color: const Color(0xffE0E0E0)),
-                                        ),
-                                        child: MaterialButton(
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                          child: Text(
-                                            'No',
-                                            style: buttonPaymentDialog,
+                                    Expanded(
+                                      flex: 2,
+                                      child: SizedBox(
+                                        height: 45,
+                                      
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            border: Border.all(
+                                                color: const Color(0xffE0E0E0)),
+                                          ),
+                                          child: MaterialButton(
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                            child: Text(
+                                              'No',
+                                              style: buttonPaymentDialog,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
                                     const SizedBox(width: 10),
 
-                                    SizedBox(
-                                      height: 45,
-                                      width: 130,
-                                      child: Container(
-                                        decoration: const BoxDecoration(
-                                          color: Color(0xff2360AD),
-                                        ),
-                                        child: MaterialButton(
-                                          onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                PageRouteBuilder(
-                                                    pageBuilder: (context,
-                                                            animation,
-                                                            secondaryAnimation) =>
-                                                        const CartNoData(),
-                                                    transitionsBuilder:
-                                                        (context,
-                                                            animation,
-                                                            secondaryAnimation,
-                                                            child) {
-                                                      return FadeTransition(
-                                                          opacity: animation,
-                                                          child: child);
-                                                    }));
-                                          },
-                                          child: Text(
-                                            'Yes',
-                                            style: buttonYesDialog,
+                                    Expanded(
+                                      flex: 2,
+                                      child: SizedBox(
+                                        height: 45,
+                                        child: Container(
+                                          decoration: const BoxDecoration(
+                                            color: Color(0xff2360AD),
+                                          ),
+                                          child: MaterialButton(
+                                            onPressed: () {
+                                              Navigator.push(
+                                                  context,
+                                                  PageRouteBuilder(
+                                                      pageBuilder: (context,
+                                                              animation,
+                                                              secondaryAnimation) =>
+                                                          const CartNoData(),
+                                                      transitionsBuilder:
+                                                          (context,
+                                                              animation,
+                                                              secondaryAnimation,
+                                                              child) {
+                                                        return FadeTransition(
+                                                            opacity: animation,
+                                                            child: child);
+                                                      }));
+                                            },
+                                            child: Text(
+                                              'Yes',
+                                              style: buttonYesDialog,
+                                            ),
                                           ),
                                         ),
                                       ),

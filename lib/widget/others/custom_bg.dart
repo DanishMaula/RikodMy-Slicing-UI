@@ -9,12 +9,13 @@ class CustomBg extends CustomPainter {
     final paint = Paint()
       ..color = const Color(0xff1C67B2)
       ..style = PaintingStyle.fill
-      ..strokeWidth = 5;
+      ..strokeWidth = 1;
     final path = Path();
     path.moveTo(0, 0.45 * size.height );
-    path.quadraticBezierTo(size.width  , size.height / 2, size.width  , size.height / 10);
+    path.quadraticBezierTo(size.width  , size.height / 2, size.width  , size.height / 9);
     path.lineTo(size.width , size.height);
-    path.lineTo(0, size.height);
+    path.lineTo(0, size.height );
+    
     path.close();
     canvas.drawPath(path, paint);
   }
