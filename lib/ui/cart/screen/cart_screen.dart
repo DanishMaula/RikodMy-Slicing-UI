@@ -371,8 +371,10 @@ class _CartScreenState extends State<CartScreen> {
                     width: 150,
                     child: MaterialButton(
                       onPressed: () {
-                        // show dialog
-                        showDialog(
+                        
+                        // show dialog when check box is checked
+                        if(isChecked == true){
+                          showDialog(
                           context: context,
                           builder: (BuildContext context) {
                             return AlertDialog(
@@ -393,49 +395,51 @@ class _CartScreenState extends State<CartScreen> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
-                                    SizedBox(
-                                      height: 45,
-                                      width: 130,
-                                      child: Container(
-                                        decoration: const BoxDecoration(
-                                            color: Color(0xff2360AD)),
-                                        child: MaterialButton(
-                                          onPressed: () {
-                                            Navigator.pushNamed(context,
-                                                '/completeTransactionQuotation');
-                                          },
-                                          child: Text(
-                                            'Yes',
-                                            style: buttonYesDialog,
+                                    Expanded(
+                                      flex: 2,
+                                      child: SizedBox(
+                                        height: 45,
+                                        
+                                        child: Container(
+                                          decoration: const BoxDecoration(
+                                              color: Color(0xff2360AD)),
+                                          child: MaterialButton(
+                                            onPressed: () {
+                                              Navigator.pushNamed(context,
+                                                  '/completeTransactionQuotation');
+                                            },
+                                            child: Text(
+                                              'Yes',
+                                              style: buttonYesDialog,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        SizedBox(
-                                          height: 45,
-                                          width: 130,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                                color: Colors.white,
-                                                border: Border.all(
-                                                    color: const Color(0xffE0E0E0))),
-                                            child: MaterialButton(
-                                              onPressed: () {
-                                                Navigator.pushNamed(context,
-                                                    '/completeTransactionCash');
-                                              },
-                                              child: Text(
-                                                'Go to payment',
-                                                style: buttonPaymentDialog,
-                                                
-                                              ),
+                                    const SizedBox(width: 10),
+                                    Expanded(
+                                      flex: 2,
+                                      child: SizedBox(
+                                        height: 45,
+                                        
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              border: Border.all(
+                                                  color: const Color(0xffE0E0E0))),
+                                          child: MaterialButton(
+                                            onPressed: () {
+                                              Navigator.pushNamed(context,
+                                                  '/completeTransactionCash');
+                                            },
+                                            child: Text(
+                                              'Go to payment',
+                                              style: buttonPaymentDialog,
+                                              
                                             ),
                                           ),
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 )
@@ -443,6 +447,9 @@ class _CartScreenState extends State<CartScreen> {
                             );
                           },
                         );
+                        }else{
+                          // do nothing
+                        }
                       },
                       color: const Color(0xff2360AD),
                       child: Text(

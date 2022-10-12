@@ -6,6 +6,7 @@ import 'package:rikodmy/utils/utils.dart';
 
 class ProductDetail extends StatefulWidget {
   final AllProduct allProduct;
+  
 
   const ProductDetail({super.key, required this.allProduct});
 
@@ -15,6 +16,7 @@ class ProductDetail extends StatefulWidget {
 
 
 class _ProductDetailState extends State<ProductDetail> {
+
 
   @override
   Widget build(BuildContext context) {
@@ -83,9 +85,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
-
-              
+              const SizedBox(height: 10),              
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Column(
@@ -131,6 +131,9 @@ class _ProductDetailState extends State<ProductDetail> {
                 child: MaterialButton(
                   onPressed: () {
                     Navigator.pop(context);
+                    setState(() {
+                     
+                    });
                   },
                   color: const Color(0xff2360AD),
                   child: Text(

@@ -54,7 +54,7 @@ class _FileResultState extends State<FileResult> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const NavBar()));
+                            builder: (context) =>  NavBar()));
                   },
                   height: 50,
                   shape: RoundedRectangleBorder(

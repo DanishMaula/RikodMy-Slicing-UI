@@ -44,8 +44,8 @@ TextStyle tabbarMenu = GoogleFonts.poppins(
 
 TextStyle cartButton = GoogleFonts.poppins(
   color: const Color(0xffffffff),
-  fontWeight: FontWeight.bold,
-  fontSize: 12,
+  fontWeight: FontWeight.w600,
+  fontSize: 11,
 );
 
 TextStyle itemName = GoogleFonts.poppins(
@@ -382,5 +382,17 @@ TextStyle titleAbout = GoogleFonts.poppins(
 TextStyle aboutContent = GoogleFonts.poppins(
   color: const Color(0xff828282),
   fontWeight: FontWeight.w600,
+  fontSize: 13,
+);
+
+TextStyle unselectedLabelStyle = GoogleFonts.poppins(
+  color: const Color(0xff828282),
+  fontWeight: FontWeight.w500,
+  fontSize: 13,
+);
+
+TextStyle selectedLabelStyle = GoogleFonts.poppins(
+  color: const Color(0xff2360AD),
+  fontWeight: FontWeight.w500,
   fontSize: 13,
 );
