@@ -279,7 +279,7 @@ class _CartScreenState extends State<CartScreen> {
                                   bottomLeft: Radius.circular(10),
                                 ),
                                 child: Image.asset(
-                                  'assets/images/xiaomi.png',
+                                  'assets/images/hasston.png',
                                   height: 110,
                                   width: 110,
                                   fit: BoxFit.cover,
@@ -295,7 +295,7 @@ class _CartScreenState extends State<CartScreen> {
                                     mainAxisSize: MainAxisSize.min,
                                     children: <Widget>[
                                       Text(
-                                        widget.allProduct.name,
+                                        'HASSTON',
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: itemName,

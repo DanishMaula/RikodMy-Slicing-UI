@@ -18,29 +18,71 @@ class _TabBarMenuState extends State<TabBarMenu>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
+
+  //tab bar menu
   final List<Tab> myTab = <Tab>[
     Tab(
-      child: Text(
-        'All Product',
-        style: tabCategory,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: const Color(0xffE0E0E0)),
+          
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 5),
+          child: Text(
+            'All Product',
+            style: tabCategory,
+          ),
+        ),
       ),
     ),
     Tab(
-      child: Text(
-        'Electronics',
-        style: tabCategory,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: const Color(0xffE0E0E0)),
+          
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 5),
+          child: Text(
+            'Electronics',
+            style: tabCategory,
+          ),
+        ),
+      ),
+    ),
+   Tab(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: const Color(0xffE0E0E0)),
+          
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 5),
+          child: Text(
+            'Tools',
+            style: tabCategory,
+          ),
+        ),
       ),
     ),
     Tab(
-      child: Text(
-        'Tools',
-        style: tabCategory,
-      ),
-    ),
-    Tab(
-      child: Text(
-        'Beauty',
-        style: tabCategory,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: const Color(0xffE0E0E0)),
+          
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 5),
+          child: Text(
+            'Beauty',
+            style: tabCategory,
+          ),
+        ),
       ),
     ),
   ];
@@ -68,12 +110,13 @@ class _TabBarMenuState extends State<TabBarMenu>
             tabs: myTab,
             labelColor: Colors.white,
             unselectedLabelColor: Colors.black,
-            indicatorSize: TabBarIndicatorSize.tab,
+            indicatorSize: TabBarIndicatorSize.label,
             indicator: const BubbleTabIndicator(
-                indicatorHeight: 30.0,
-                indicatorColor: Color(0xff2360AD),
-                
-                tabBarIndicatorSize: TabBarIndicatorSize.tab),
+              indicatorHeight: 28.0,
+              indicatorColor: Color(0xff2360AD),
+              tabBarIndicatorSize: TabBarIndicatorSize.label,
+            ),
+            indicatorPadding:  const EdgeInsets.only(left: 10, right: 10,),
             isScrollable: true,
           ),
           const SizedBox(
@@ -89,6 +132,8 @@ class _TabBarMenuState extends State<TabBarMenu>
                   )),
             ],
           ),
+
+          // list product
           Expanded(
             child: TabBarView(
                 // ignore: sort_child_properties_last

@@ -4,8 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:rikodmy/models/data_customer.dart';
 import 'package:rikodmy/widget/others/search_bar.dart';
 
-import '../../utils/utils.dart';
-import '../../widget/list_item/customer_item.dart';
+import '../../../utils/utils.dart';
+import '../../../widget/list_item/customer_item.dart';
 
 class SearchCustomer extends StatefulWidget {
   const SearchCustomer({super.key});

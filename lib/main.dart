@@ -9,10 +9,11 @@ import 'package:rikodmy/ui/cart/transaction/completed_transaction_cash.dart';
 import 'package:rikodmy/ui/cart/transaction/completed_transaction_quotation.dart';
 import 'package:rikodmy/ui/cart/transaction/file_result.dart';
 import 'package:rikodmy/ui/home/screen/home_screen.dart';
-import 'package:rikodmy/ui/login/login_screen.dart';
+
+import 'package:rikodmy/ui/login/screen/login_screen.dart';
 import 'package:rikodmy/widget/others/nav_bar.dart';
 
-import 'ui/customer/search_customer.dart';
+import 'ui/customer/screen/search_customer.dart';
 import 'ui/ledger/detail/ledger_expenses_detail.dart';
 
 void main() {

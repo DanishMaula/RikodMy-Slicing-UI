@@ -195,7 +195,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Version 2.0.0', style: version),
+                      Text('Version 2.0.0', style: versionProfile),
                     ],
                   ),
                   const SizedBox(height: 20),

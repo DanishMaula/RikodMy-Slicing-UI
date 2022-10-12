@@ -43,6 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     
+                    // cart button
                     MaterialButton(
                        color: const Color(0xff2360AD),
                        minWidth: 10,

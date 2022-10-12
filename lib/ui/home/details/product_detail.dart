@@ -84,6 +84,8 @@ class _ProductDetailState extends State<ProductDetail> {
                 ),
               ),
               const SizedBox(height: 10),
+
+              
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Column(
@@ -115,6 +117,8 @@ class _ProductDetailState extends State<ProductDetail> {
           ],
           color: Colors.white,
         ),
+
+        // button add cart
         child: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: Row(
