@@ -26,6 +26,7 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
           leading: IconButton(
             icon: const Icon(
               Icons.arrow_back_ios,
@@ -55,6 +56,9 @@ class _CartScreenState extends State<CartScreen> {
                       Checkbox(
                         checkColor: Colors.white,
                         value: isChecked,
+                        fillColor: MaterialStateProperty.all(
+                          const Color(0xff2360AD),
+                        ),
                         shape: const CircleBorder(),
                         onChanged: (bool? value) {
                           setState(() {
@@ -167,6 +171,9 @@ class _CartScreenState extends State<CartScreen> {
                   Checkbox(
                     checkColor: Colors.white,
                     value: isChecked,
+                    fillColor: MaterialStateProperty.all(
+                      const Color(0xff2360AD),
+                    ),
                     shape: const CircleBorder(),
                     onChanged: (bool? value) {},
                   ),
@@ -257,6 +264,9 @@ class _CartScreenState extends State<CartScreen> {
                   Checkbox(
                     checkColor: Colors.white,
                     value: isChecked,
+                    fillColor: const MaterialStatePropertyAll(
+                      Color(0xff2360AD),
+                    ),
                     shape: const CircleBorder(),
                     onChanged: (bool? value) {},
                   ),

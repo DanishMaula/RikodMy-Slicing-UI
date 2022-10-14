@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rikodmy/ui/history/tabbar_history.dart';
 import 'package:rikodmy/ui/ledger/tabbar_ledger.dart';
 import 'package:rikodmy/utils/utils.dart';
@@ -35,6 +36,7 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

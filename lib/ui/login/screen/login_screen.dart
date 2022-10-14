@@ -27,6 +27,7 @@ bool _isObscure = true;
           child: SingleChildScrollView(
             child: SafeArea(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
@@ -105,7 +106,6 @@ bool _isObscure = true;
                   const SizedBox(height: 20),
                   Center(
                     child: Text(
-                      
                       '"if you forgot you password please contact your\n admin company to change password immediately"',
                       style: italicInfo,
                     ),

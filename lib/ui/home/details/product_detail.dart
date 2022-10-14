@@ -132,7 +132,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   onPressed: () {
                     Navigator.pop(context);
                     setState(() {
-                     
+                      
                     });
                   },
                   color: const Color(0xff2360AD),

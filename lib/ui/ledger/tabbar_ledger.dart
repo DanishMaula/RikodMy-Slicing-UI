@@ -6,16 +6,19 @@ import 'package:rikodmy/ui/ledger/screen/ledger_screen_expenses.dart';
 import 'package:rikodmy/utils/utils.dart';
 
 class TabbarLedger extends StatefulWidget {
+  
+
   const TabbarLedger({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _TabbarLedgerState createState() => _TabbarLedgerState();
 }
 
 class _TabbarLedgerState extends State<TabbarLedger>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  
+  
 
   @override
   void initState() {
@@ -44,33 +47,45 @@ class _TabbarLedgerState extends State<TabbarLedger>
         padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
         child: Column(
           children: [
-            // give the tab bar a height [can change hheight to preferred height]
+            // give the tab bar a height [can change height to preferred height]
             Container(
               height: 45,
               decoration: BoxDecoration(
                 border: Border.all(color: const Color(0xffE0E0E0), width: 1),
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  bottomLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
-                ),
-              ),
-              child: TabBar(
-                controller: _tabController,
-                // give the indicator a decoration (color and border radius)
-                indicator: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                borderRadius:  const BorderRadius.only(
                     topLeft: Radius.circular(10),
                     bottomLeft: Radius.circular(10),
                     topRight: Radius.circular(10),
                     bottomRight: Radius.circular(10),
                   ),
-                  color: Color(0xff2360AD),
+              ),
+              child: TabBar(
+                controller: _tabController,
+                // give the indicator a decoration (color and border radius)
+                onTap: (value) {
+                  setState(() {
+                    _tabController.index = value;
+                  });
+                },
+                indicator:  BoxDecoration(
+                  color: const Color(0xff2360AD),
+
+                  borderRadius: _tabController.index == 0 
+                      ? const BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                        )
+                      : const BorderRadius.only(
+                          topRight: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                        ),
+
+                        
                 ),
+
                 labelColor: const Color(0xffffffff),
                 unselectedLabelColor: const Color(0xff828282),
-                // ignore: prefer_const_literals_to_create_immutables
+                
                 tabs: [
                   Tab(
                     child: Text('Expenses', style: tabbarLedgerText),
@@ -84,6 +99,7 @@ class _TabbarLedgerState extends State<TabbarLedger>
             // tab bar view here
             Expanded(
               child: TabBarView(
+                physics: const NeverScrollableScrollPhysics(),
                 controller: _tabController,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
