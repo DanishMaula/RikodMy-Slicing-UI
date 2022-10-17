@@ -20,12 +20,17 @@ bool _isObscure = true;
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff2360AD),
-      body: CustomPaint(
-        painter: CustomBg(),
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          child: SingleChildScrollView(
-            child: SafeArea(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/login_bg.jpg'),
+                fit: BoxFit.fill,
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -80,7 +80,6 @@ class _TabbarLedgerState extends State<TabbarLedger>
                           bottomRight: Radius.circular(10),
                         ),
 
-                        
                 ),
 
                 labelColor: const Color(0xffffffff),
