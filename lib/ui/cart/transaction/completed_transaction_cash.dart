@@ -231,7 +231,7 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                                                 textAlign: TextAlign.center,
                                                 style: modalSheetStyle),
                                             onTap: () {
-                                              Navigator.pop(context);
+                                              
                                             },
                                           ),
                                           const Divider(
@@ -244,7 +244,7 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                                               style: modalSheetStyle,
                                             ),
                                             onTap: () {
-                                              Navigator.pop(context);
+                                              
                                             },
                                           ),
                                           const Divider(color: Colors.grey),
@@ -255,7 +255,7 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                                               style: modalSheetCancelStyle,
                                             ),
                                             onTap: () {
-                                              Navigator.pop(context);
+                                              
                                             },
                                           ),
                                         ],
@@ -373,8 +373,8 @@ class _CompleteTransactionCashState extends State<CompleteTransactionCash> {
                                     const Divider(
                                       color: Colors.grey,
                                       thickness: 2,
-                                      endIndent: 170,
-                                      indent: 170,
+                                      indent: 160,
+                                      endIndent: 160,
                                     ),
                                     const SizedBox(height: 10),
                                     Text('Success Checkout',

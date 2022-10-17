@@ -403,7 +403,7 @@ class _CartScreenState extends State<CartScreen> {
                               actions: <Widget>[
                                 Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Expanded(
                                       flex: 2,
@@ -431,7 +431,6 @@ class _CartScreenState extends State<CartScreen> {
                                       flex: 2,
                                       child: SizedBox(
                                         height: 45,
-                                        
                                         child: Container(
                                           decoration: BoxDecoration(
                                               color: Colors.white,
